@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Coach — Analyse de tes parties</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chess Coach">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#15181c">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-icon">♞</span>
+    <div>
+      <h1>Chess Coach</h1>
+      <p class="tagline">Trouve tes erreurs récurrentes, gagne de l'Elo</p>
+    </div>
+  </div>
+  <div class="screen-nav">
+    <button class="screen-nav-btn active" id="navAnalysisBtn" data-screen="analysis">Analyse de parties</button>
+    <button class="screen-nav-btn" id="navOpeningsBtn" data-screen="openings">Ouvertures</button>
+  </div>
+  <div class="import-bar">
+    <input id="username" type="text" placeholder="Ton pseudo chess.com" autocomplete="off">
+    <select id="timeClass">
+      <option value="rapid" selected>Rapide</option>
+      <option value="blitz">Blitz</option>
+      <option value="bullet">Bullet</option>
+      <option value="daily">Par correspondance</option>
+    </select>
+    <input id="numGames" type="number" min="5" max="30" value="20" title="Nombre de parties à importer">
+    <button id="importBtn">Importer mes parties</button>
+  </div>
+  <div class="cache-bar">
+    <span id="cacheInfo"></span>
+    <button id="viewCacheBtn" title="Revoir les parties déjà analysées, sans appel réseau">Voir les parties en cache</button>
+    <button id="clearCacheBtn" title="Force une ré-analyse complète au prochain import">Vider le cache</button>
+  </div>
+</header>
+
+<main>
+<div id="analysisScreen">
+  <section id="statusPanel" class="status-panel hidden">
+    <div class="status-line">
+      <span id="statusText">Prêt.</span>
+      <span id="statusProgress"></span>
+    </div>
+    <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+  </section>
+
+  <section id="summaryPanel" class="summary-panel hidden">
+    <h2>Résumé — tes erreurs les plus fréquentes</h2>
+    <div class="summary-grid">
+      <div class="summary-col">
+        <div id="themeChart" class="theme-chart"></div>
+        <div class="summary-stats" id="summaryStats"></div>
+      </div>
+      <div class="summary-col recurring-col">
+        <div class="panel-header">
+          <h3>Positions où tu te trompes plusieurs fois</h3>
+          <button id="seeAllRecurringBtn" class="ghost-btn">Voir tout</button>
+        </div>
+        <div id="recurringPreview" class="recurring-preview"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workspace" class="workspace hidden">
+    <div class="board-col">
+      <div id="board" class="board"></div>
+      <div class="board-controls">
+        <button id="prevErrBtn" title="Erreur précédente">◀ Erreur préc.</button>
+        <span id="moveInfo">—</span>
+        <button id="nextErrBtn" title="Erreur suivante">Erreur suiv. ▶</button>
+      </div>
+      <div class="board-legend">
+        <span><i class="legend-dot legend-bad"></i>coup joué</span>
+        <span><i class="legend-dot legend-good"></i>coup conseillé</span>
+      </div>
+      <div id="evalBarWrap" class="eval-bar-wrap">
+        <div id="evalBar" class="eval-bar"><div id="evalFill" class="eval-fill"></div></div>
+        <span id="evalText">0.0</span>
+      </div>
+      <div id="explainBox" class="explain-box hidden">
+        <p class="explain-row explain-bad"><strong>Pourquoi c'est une erreur —</strong> <span id="explainBad"></span></p>
+        <p class="explain-row explain-good"><strong>Pourquoi c'est mieux —</strong> <span id="explainGood"></span></p>
+        <div class="pv-section hidden" id="pvSection">
+          <div class="pv-mode-toggle">
+            <button class="pv-mode-btn active" id="pvModeGoodBtn" data-mode="good">Coup conseillé</button>
+            <button class="pv-mode-btn" id="pvModeBadBtn" data-mode="bad">Comment l'adversaire punit</button>
+          </div>
+          <p class="explain-row explain-pv"><span id="explainPv"></span></p>
+          <div class="pv-player" id="pvPlayer">
+            <button id="pvPrevBtn" title="Reculer d'un coup">◀</button>
+            <span id="pvStepLabel">Position de départ</span>
+            <button id="pvNextBtn" title="Avancer d'un coup">Voir la suite ▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="errors">Erreurs de la partie</button>
+        <button class="tab-btn" data-tab="recurring">Erreurs récurrentes</button>
+        <button class="tab-btn" data-tab="games">Mes parties</button>
+      </div>
+
+      <div id="tab-errors" class="tab-panel active">
+        <div id="errorList" class="error-list"></div>
+      </div>
+
+      <div id="tab-recurring" class="tab-panel">
+        <p class="recurring-intro">Positions exactes que tu as atteintes plusieurs fois, où tu t'es trompé <strong>à chaque fois</strong> — classées par gravité cumulée. Clique une occurrence pour l'ouvrir sur l'échiquier.</p>
+        <div id="recurringList" class="recurring-list"></div>
+      </div>
+
+      <div id="tab-games" class="tab-panel">
+        <div id="gamesList" class="games-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="emptyState" class="empty-state">
+    <p>Entre ton pseudo chess.com ci-dessus et clique sur <strong>Importer mes parties</strong> pour commencer.</p>
+    <p class="empty-note">Tout tourne en local dans ton navigateur : aucune donnée n'est envoyée ailleurs qu'à l'API publique de chess.com.</p>
+  </section>
+</div>
+
+<div id="openingsScreen" class="hidden">
+  <section class="workspace openings-workspace">
+    <div class="board-col">
+      <div id="openingsBoard" class="board"></div>
+      <div class="board-controls">
+        <button id="opPrevBtn" title="Coup précédent">◀ Coup préc.</button>
+        <span id="opMoveInfo">Choisis une ouverture à droite →</span>
+        <button id="opNextBtn" title="Coup suivant">Coup suiv. ▶</button>
+      </div>
+      <div class="op-flip-row">
+        <button id="opFlipBtn" class="ghost-btn">Retourner l'échiquier</button>
+        <button id="opResetBtn" class="ghost-btn">Revenir au début</button>
+      </div>
+      <div id="opCommentBox" class="explain-box op-comment-box hidden">
+        <p class="explain-row" id="opComment"></p>
+      </div>
+      <div id="opMoveListBox" class="op-move-list-box hidden">
+        <div id="opMoveList" class="op-move-list"></div>
+      </div>
+    </div>
+
+    <div class="side-col">
+      <div class="op-intro-box" id="opIntroBox">
+        <h2>Ouvertures</h2>
+        <p>Choisis un premier coup, une famille, puis une variante pour la voir se dérouler sur l'échiquier, coup par coup, avec l'idée derrière chaque coup — pour les Blancs comme pour les défenses des Noirs.</p>
+      </div>
+      <div class="op-filter-row">
+        <button class="op-filter-btn active" data-filter="all">Toutes</button>
+        <button class="op-filter-btn" data-filter="e4">1.e4</button>
+        <button class="op-filter-btn" data-filter="d4">1.d4</button>
+        <button class="op-filter-btn" data-filter="flank">Flanc</button>
+        <button class="op-filter-btn op-fav-filter-btn" id="opFavFilterBtn" data-filter="favorites">★ Favoris</button>
+      </div>
+      <div class="op-filter-row">
+        <button class="op-color-btn active" data-color="all">Toutes</button>
+        <button class="op-color-btn" data-color="w">⚪ Répertoire Blancs</button>
+        <button class="op-color-btn" data-color="b">⚫ Défenses Noirs</button>
+      </div>
+      <div id="openingsList" class="openings-list"></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+
+<script src="js/stockfish-engine.js"></script>
+<script src="js/chesscom-api.js"></script>
+<script src="js/analyzer.js"></script>
+<script src="js/game-cache.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+<script src="js/openings-data.js"></script>
+<script src="js/favorites.js"></script>
+<script src="js/openings.js"></script>
+</body>
+</html>
