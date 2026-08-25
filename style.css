@@ -73,6 +73,11 @@ body{
 .import-bar button:hover{filter:brightness(1.1);}
 .import-bar button:disabled{opacity:.5;cursor:not-allowed;}
 
+.import-summary{display:flex;align-items:center;gap:12px;}
+#importSummaryText{font-size:13.5px;color:var(--text-dim);}
+#importSummaryText strong{color:var(--text);}
+#changePseudoBtn{padding:6px 12px;font-size:12px;}
+
 .cache-bar{
   display:flex;align-items:center;gap:12px;justify-content:flex-end;
   padding:6px 24px 0;font-size:11.5px;color:var(--text-dim);
@@ -156,6 +161,14 @@ main{max-width:1180px;margin:0 auto;padding:24px;}
 .workspace{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;}
 .board-col{flex:0 0 auto;width:420px;max-width:100%;}
 .board{width:100%;}
+/* Without this, dragging a piece with a finger on mobile Safari gets interpreted as a
+   page-scroll/zoom gesture instead — the board (or the whole page) shifts under your
+   finger instead of the piece following it. touch-action:none tells the browser this
+   element handles its own touch gestures (chessboard.js's own drag logic). Scoped to
+   the puzzle board only — it's the only one that's actually draggable; the other two
+   are read-only, so letting a swipe that starts on them still scroll the page is fine
+   (and arguably better) there. */
+#puzzleBoard, #puzzleBoard *{touch-action:none;}
 .board .sq-bad{background:rgba(255,92,92,.55) !important;box-shadow:inset 0 0 0 3px var(--danger);}
 .board .sq-good{background:rgba(61,220,132,.55) !important;box-shadow:inset 0 0 0 3px var(--ok);}
 .board .sq-bad.sq-good{background:linear-gradient(135deg,rgba(255,92,92,.55) 50%,rgba(61,220,132,.55) 50%) !important;}

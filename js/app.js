@@ -17,6 +17,7 @@ const state = {
   pvIndex: 0,
   pvMode: 'good',
   recurringClusters: [],
+  importBarCollapsed: false,
 };
 
 document.addEventListener('DOMContentLoaded', init);
@@ -39,7 +40,33 @@ function init() {
   document.getElementById('recurringPreview').addEventListener('click', onRecurringClick);
   document.getElementById('recurringList').addEventListener('click', onRecurringClick);
   document.getElementById('viewCacheBtn').addEventListener('click', onViewCache);
+  document.getElementById('changePseudoBtn').addEventListener('click', expandImportBar);
   updateCacheInfo();
+}
+
+// The import bar (pseudo/cadence/nombre + le bouton) and the cache bar only matter on
+// the analysis screen — hide both elsewhere. On the analysis screen itself, the full
+// form collapses to a compact "👤 pseudo · cadence" summary once an import has actually
+// been triggered, so it stops eating header space once it's done its job.
+function updateHeaderVisibility() {
+  const isAnalysis = typeof opState === 'undefined' || opState.screen === 'analysis';
+  document.getElementById('cacheBar').classList.toggle('hidden', !isAnalysis);
+  document.getElementById('importBar').classList.toggle('hidden', !isAnalysis || state.importBarCollapsed);
+  document.getElementById('importSummary').classList.toggle('hidden', !isAnalysis || !state.importBarCollapsed);
+}
+
+function collapseImportBar(username, timeClass) {
+  state.importBarCollapsed = true;
+  const timeClassLabels = { rapid: 'Rapide', blitz: 'Blitz', bullet: 'Bullet', daily: 'Correspondance' };
+  document.getElementById('importSummaryText').innerHTML =
+    '👤 <strong>' + escapeHtml(username) + '</strong> · ' + escapeHtml(timeClassLabels[timeClass] || timeClass);
+  updateHeaderVisibility();
+}
+
+function expandImportBar() {
+  state.importBarCollapsed = false;
+  updateHeaderVisibility();
+  document.getElementById('username').focus();
 }
 
 // Loads whatever is already in the cache straight into the UI — no chess.com API call,
@@ -145,6 +172,7 @@ async function onImport() {
       return;
     }
 
+    collapseImportBar(username, timeClass);
     state.games = rawGames.map((g, i) => buildGameRecord(g, username, i));
     state.allErrors = [];
     state.selectedGameIndex = -1;

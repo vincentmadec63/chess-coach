@@ -29,7 +29,7 @@
     <button class="screen-nav-btn" id="navOpeningsBtn" data-screen="openings">Ouvertures</button>
     <button class="screen-nav-btn" id="navPuzzlesBtn" data-screen="puzzles">Entraînement</button>
   </div>
-  <div class="import-bar">
+  <div class="import-bar" id="importBar">
     <input id="username" type="text" placeholder="Ton pseudo chess.com" autocomplete="off">
     <select id="timeClass">
       <option value="rapid" selected>Rapide</option>
@@ -40,7 +40,11 @@
     <input id="numGames" type="number" min="5" max="30" value="20" title="Nombre de parties à importer">
     <button id="importBtn">Importer mes parties</button>
   </div>
-  <div class="cache-bar">
+  <div class="import-summary hidden" id="importSummary">
+    <span id="importSummaryText"></span>
+    <button id="changePseudoBtn" class="ghost-btn">Changer</button>
+  </div>
+  <div class="cache-bar" id="cacheBar">
     <span id="cacheInfo"></span>
     <button id="viewCacheBtn" title="Revoir les parties déjà analysées, sans appel réseau">Voir les parties en cache</button>
     <button id="clearCacheBtn" title="Force une ré-analyse complète au prochain import">Vider le cache</button>

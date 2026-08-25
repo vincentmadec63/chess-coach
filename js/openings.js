@@ -78,6 +78,7 @@ function switchScreen(screen) {
   document.getElementById('navAnalysisBtn').classList.toggle('active', screen === 'analysis');
   document.getElementById('navOpeningsBtn').classList.toggle('active', screen === 'openings');
   document.getElementById('navPuzzlesBtn').classList.toggle('active', screen === 'puzzles');
+  if (typeof updateHeaderVisibility === 'function') updateHeaderVisibility();
   // Every board was possibly created while its section was display:none, which makes
   // chessboard.js measure a 0-width container (see the analysis-board resize fix) —
   // re-measure whichever board just became visible.
