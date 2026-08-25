@@ -30,6 +30,7 @@ body{
 .hidden{display:none !important;}
 
 /* Topbar */
+body{padding-top:var(--topbar-h, 96px);}
 .topbar{
   display:flex;
   flex-wrap:wrap;
@@ -39,8 +40,15 @@ body{
   padding:16px 24px;
   background:var(--bg-panel);
   border-bottom:1px solid var(--border);
-  position:sticky;
+  /* position:fixed rather than sticky: sticky can silently fail to pin an element on
+     some mobile browsers depending on the exact ancestor chain, with no visual clue why.
+     Fixed always works, at the cost of needing body's padding-top kept in sync with this
+     bar's actual (variable — the import bar shows/hides per screen) height — see the
+     syncTopbarHeight() call in js/app.js. */
+  position:fixed;
   top:0;
+  left:0;
+  right:0;
   z-index:10;
 }
 .brand{display:flex;align-items:center;gap:12px;}

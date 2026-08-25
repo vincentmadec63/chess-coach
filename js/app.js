@@ -53,7 +53,21 @@ function updateHeaderVisibility() {
   document.getElementById('cacheBar').classList.toggle('hidden', !isAnalysis);
   document.getElementById('importBar').classList.toggle('hidden', !isAnalysis || state.importBarCollapsed);
   document.getElementById('importSummary').classList.toggle('hidden', !isAnalysis || !state.importBarCollapsed);
+  syncTopbarHeight();
 }
+
+// The topbar is position:fixed (see style.css for why, over position:sticky) so the
+// page needs an equal padding-top to avoid content sliding under it — and that height
+// isn't constant (the import bar/cache bar show or hide per screen), so re-measure it
+// on every visibility change, on load and on resize (font-size changes, orientation
+// change, the address bar collapsing on mobile Safari, etc.).
+function syncTopbarHeight() {
+  const bar = document.querySelector('.topbar');
+  if (!bar) return;
+  document.documentElement.style.setProperty('--topbar-h', bar.offsetHeight + 'px');
+}
+window.addEventListener('resize', syncTopbarHeight);
+document.addEventListener('DOMContentLoaded', syncTopbarHeight);
 
 function collapseImportBar(username, timeClass) {
   state.importBarCollapsed = true;
