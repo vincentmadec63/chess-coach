@@ -5,9 +5,11 @@ récurrentes en rapide et progresser plus vite, et pour apprendre les ouvertures
 
 ## Écran Ouvertures
 
-Bouton **Ouvertures** en haut de page. 28 familles (Italienne, Espagnole, Écossaise,
-Sicilienne, Française, Caro-Kann, Gambit Dame, Est-Indienne, Anglaise…), chacune avec 2 à
-4 variantes nommées, jouables coup par coup sur l'échiquier avec l'idée expliquée à chaque
+Bouton **Ouvertures** en haut de page. 40 familles (Italienne, Espagnole, Écossaise,
+Sicilienne, Française, Caro-Kann, Gambit Dame, Est-Indienne, Anglaise, Philidor, Gambit
+Danois, Quatre Cavaliers, Ponziani, Grand Prix, Gambit Budapest, Vieille Indienne, Attaque
+Torre, Système Veresov, Gambit Blackmar-Diemer, Défense Nimzowitsch…), chacune avec 1 à 4
+variantes nommées, jouables coup par coup sur l'échiquier avec l'idée expliquée à chaque
 coup — aussi bien le plan des Blancs que les défenses classiques des Noirs.
 
 - Chaque famille est étiquetée **⚪ Répertoire Blancs** ou **⚫ Défenses Noirs**, avec un
@@ -21,9 +23,9 @@ coup — aussi bien le plan des Blancs que les défenses classiques des Noirs.
 Contenu écrit à la main dans `js/openings-data.js` et validé coup par coup avec chess.js
 (`tools/validate-openings.js`) pour garantir qu'aucune ligne n'est illégale — relance ce
 script après toute modification du fichier de données. C'est un répertoire volontairement
-"essentiel" (~730 coups au total), pas une base de données exhaustive : il couvre les
-lignes principales des ouvertures les plus courantes, pas toutes les transpositions et
-variantes rares.
+"essentiel" (plus de 1000 coups au total), pas une base de données exhaustive : il couvre
+les lignes principales des ouvertures les plus courantes (et pas mal de systèmes annexes
+peu théoriques), pas toutes les transpositions et variantes rares.
 
 ## Écran Entraînement (puzzles)
 
