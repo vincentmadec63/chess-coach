@@ -30,8 +30,12 @@ variantes rares.
 Bouton **Entraînement**. Pas de base de puzzles séparée : chaque erreur déjà détectée
 dans tes parties analysées (n'importe laquelle, dans n'importe quelle partie en cache)
 devient un puzzle — "voici la position juste avant l'erreur, trouve le coup que tu
-aurais dû jouer". Glisse une pièce sur l'échiquier pour répondre.
+aurais dû jouer". Deux façons de répondre, comme sur chess.com/lichess : glisse une pièce
+sur l'échiquier, ou touche la pièce puis touche la case d'arrivée (plus fiable au doigt).
 
+- **Indice** : bouton 💡 qui te dit juste quelle pièce regarder (case comprise), sans
+  révéler ni la destination ni pourquoi — un petit coup de pouce, pas la réponse. Ne
+  compte pas comme une tentative, n'affecte ni le niveau ni les points.
 - **Niveau adaptatif** : comme sur lichess/chess.com, un rating (départ 1200) s'ajuste
   après chaque tentative selon une formule Elo — résoudre un puzzle plus difficile que
   ton niveau le fait monter davantage, rater un puzzle facile le fait baisser davantage.

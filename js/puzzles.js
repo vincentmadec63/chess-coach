@@ -71,6 +71,7 @@ const puzState = {
   attemptedKeys: new Set(),
   current: null,
   solved: false,
+  selectedSquare: null,  // tap-to-move: square of the piece currently picked up, if any
 };
 
 document.addEventListener('DOMContentLoaded', initPuzzles);
@@ -84,9 +85,21 @@ function initPuzzles() {
     onDrop: puzzleOnDrop,
   });
 
+  // Tap-to-move (pick a piece, then tap the destination square), for anyone who finds
+  // dragging fiddly on a phone — same interaction chess.com/lichess offer alongside
+  // drag. chessboard.js only wires its own touch/mouse handling to squares that have a
+  // piece on them (see touchstartSquare in the vendored lib), so a tap on an *empty*
+  // destination square never reaches it — this delegated click listener is what catches
+  // that. It coexists with dragging: a real drag ends with mouseup/touchend on a
+  // different square than it started on, which never fires a native 'click' at all, so
+  // there's no double-handling. A source-square tap alone (no movement) does reach
+  // chessboard.js's onDrop as a source===target "drop" — puzzleOnDrop() ignores that
+  // case on purpose so this click handler stays the single source of truth for taps.
+  document.getElementById('puzzleBoard').addEventListener('click', onPuzzleBoardClick);
   document.getElementById('navPuzzlesBtn').addEventListener('click', () => switchScreen('puzzles'));
   document.getElementById('puzzleSkipBtn').addEventListener('click', loadNextPuzzle);
   document.getElementById('puzzleNextBtn').addEventListener('click', loadNextPuzzle);
+  document.getElementById('puzzleHintBtn').addEventListener('click', showPuzzleHint);
 
   renderPuzzleStats();
 }
@@ -165,7 +178,9 @@ function loadNextPuzzle() {
 
   document.getElementById('puzzleColorLabel').textContent = puzzle.color === 'b' ? 'Noirs' : 'Blancs';
   document.getElementById('puzzleFeedback').classList.add('hidden');
+  document.getElementById('puzzleHintText').classList.add('hidden');
   document.getElementById('puzzleSkipBtn').classList.remove('hidden');
+  document.getElementById('puzzleHintBtn').classList.remove('hidden');
   document.getElementById('puzzleNextBtn').classList.add('hidden');
 
   if (puzzle.theme) {
@@ -185,22 +200,83 @@ function puzzleOnDragStart(source) {
 
 function puzzleOnDrop(source, target) {
   if (!puzState.current || puzState.solved || !puzState.chess) return 'snapback';
+  if (source === target) return 'snapback'; // a tap, not a drag — the click handler owns this case
+  deselectPuzzleSquare();
+  attemptPuzzleMove(source, target);
+  return 'snapback';
+}
 
-  const piece = puzState.chess.get(source);
-  if (!piece) return 'snapback';
-  const needsPromotion = piece.type === 'p' && (target[1] === '8' || target[1] === '1');
-  const moveObj = { from: source, to: target };
+// Shared by both drag-drop and tap-to-move. Returns true if `from`→`to` was a legal
+// move (right or wrong answer, both count as an attempt); false if illegal, so the
+// caller knows nothing happened (e.g. to leave the current selection as-is).
+function attemptPuzzleMove(from, to) {
+  if (!puzState.current || puzState.solved || !puzState.chess) return false;
+
+  const piece = puzState.chess.get(from);
+  if (!piece) return false;
+  const needsPromotion = piece.type === 'p' && (to[1] === '8' || to[1] === '1');
+  const moveObj = { from, to };
   if (needsPromotion) moveObj.promotion = 'q';
 
   const mv = puzState.chess.move(moveObj);
-  if (!mv) return 'snapback';
+  if (!mv) return false;
 
   const resultFen = puzState.chess.fen();
   puzState.chess.undo();
 
-  const uci = source + target + (needsPromotion ? 'q' : '');
-  resolvePuzzleAttempt(uci === puzState.current.bestMoveBefore, source, target, resultFen);
-  return 'snapback';
+  const uci = from + to + (needsPromotion ? 'q' : '');
+  resolvePuzzleAttempt(uci === puzState.current.bestMoveBefore, from, to, resultFen);
+  return true;
+}
+
+function onPuzzleBoardClick(e) {
+  const squareEl = e.target.closest('[data-square]');
+  if (!squareEl || !puzState.current || puzState.solved || !puzState.chess) return;
+  const square = squareEl.dataset.square;
+  const sideToMove = puzState.chess.turn();
+  const pieceHere = puzState.chess.get(square);
+
+  if (!puzState.selectedSquare) {
+    if (pieceHere && pieceHere.color === sideToMove) selectPuzzleSquare(square);
+    return;
+  }
+
+  if (square === puzState.selectedSquare) {
+    deselectPuzzleSquare();
+    return;
+  }
+
+  // Tapping another one of your own pieces switches the selection instead of
+  // attempting an (illegal) move onto it.
+  if (pieceHere && pieceHere.color === sideToMove) {
+    selectPuzzleSquare(square);
+    return;
+  }
+
+  const moved = attemptPuzzleMove(puzState.selectedSquare, square);
+  if (!moved) deselectPuzzleSquare();
+}
+
+function selectPuzzleSquare(square) {
+  clearSelectionHighlights();
+  puzState.selectedSquare = square;
+  const el = document.querySelector('#puzzleBoard [data-square="' + square + '"]');
+  if (el) el.classList.add('sq-selected');
+  (puzState.chess.moves({ square, verbose: true }) || []).forEach((m) => {
+    const targetEl = document.querySelector('#puzzleBoard [data-square="' + m.to + '"]');
+    if (targetEl) targetEl.classList.add('sq-legal');
+  });
+}
+
+function deselectPuzzleSquare() {
+  puzState.selectedSquare = null;
+  clearSelectionHighlights();
+}
+
+function clearSelectionHighlights() {
+  document.querySelectorAll('#puzzleBoard .sq-selected, #puzzleBoard .sq-legal').forEach((el) => {
+    el.classList.remove('sq-selected', 'sq-legal');
+  });
 }
 
 function resolvePuzzleAttempt(correct, from, to, resultFen) {
@@ -222,6 +298,7 @@ function resolvePuzzleAttempt(correct, from, to, resultFen) {
   renderPuzzleFeedback(correct, puzzle, pointsGained, stats);
 
   document.getElementById('puzzleSkipBtn').classList.add('hidden');
+  document.getElementById('puzzleHintBtn').classList.add('hidden');
   document.getElementById('puzzleNextBtn').classList.remove('hidden');
 }
 
@@ -260,6 +337,26 @@ function clearPuzzleHighlights() {
   document.querySelectorAll('#puzzleBoard .sq-bad, #puzzleBoard .sq-good').forEach((el) => {
     el.classList.remove('sq-bad', 'sq-good');
   });
+  puzState.selectedSquare = null;
+  clearSelectionHighlights();
+}
+
+// A small nudge, not the answer: names the piece that should move and where it stands
+// (chess.com's "hint" glows the piece — this is the same idea in one line of text).
+// Doesn't touch rating/points/attempts; purely informational.
+function showPuzzleHint() {
+  if (!puzState.current || puzState.solved || !puzState.chess) return;
+  const hintEl = document.getElementById('puzzleHintText');
+  hintEl.textContent = '💡 ' + getPuzzleHint(puzState.current);
+  hintEl.classList.remove('hidden');
+}
+
+function getPuzzleHint(puzzle) {
+  const parsed = Analyzer.parseUci(puzzle.bestMoveBefore);
+  const pieceNames = { p: 'pion', n: 'cavalier', b: 'fou', r: 'tour', q: 'dame', k: 'roi' };
+  const pieceAt = parsed ? puzState.chess.get(parsed.from) : null;
+  if (!pieceAt) return 'Regarde bien la position, coup par coup.';
+  return 'Regarde du côté de ta/ton ' + pieceNames[pieceAt.type] + ' en ' + parsed.from + '.';
 }
 
 function highlightPuzzleSquares(squares, cls) {

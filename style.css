@@ -377,6 +377,15 @@ main{max-width:1180px;margin:0 auto;padding:24px;}
 
 .puzzle-prompt{font-size:14.5px;color:var(--text);margin:12px 0 0;line-height:1.5;}
 .puzzle-prompt span{font-weight:700;color:var(--accent);}
+.puzzle-hint{font-size:13px;color:var(--warn);margin:8px 0 0;line-height:1.5;}
+
+/* Tap-to-move: the picked-up piece's square, and a small dot on each square it can
+   legally go to — same visual language chess.com/lichess use. */
+#puzzleBoard [data-square].sq-selected{background:rgba(79,163,255,.5) !important;box-shadow:inset 0 0 0 3px var(--accent);}
+#puzzleBoard [data-square].sq-legal::after{
+  content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:24%;height:24%;border-radius:50%;background:rgba(79,163,255,.55);pointer-events:none;
+}
 
 .puzzle-feedback{margin-top:12px;}
 .puzzle-feedback.is-correct{border-color:var(--ok);}
