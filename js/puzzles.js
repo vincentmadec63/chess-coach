@@ -108,7 +108,6 @@ function initPuzzles() {
   boardEl.addEventListener('touchstart', onPuzzleBoardTouchStart, { passive: true });
   boardEl.addEventListener('touchend', onPuzzleBoardTouchEnd);
   boardEl.addEventListener('click', onPuzzleBoardClick);
-  document.getElementById('navPuzzlesBtn').addEventListener('click', () => switchScreen('puzzles'));
   document.getElementById('puzzleSkipBtn').addEventListener('click', loadNextPuzzle);
   document.getElementById('puzzleNextBtn').addEventListener('click', loadNextPuzzle);
   document.getElementById('puzzleRetryBtn').addEventListener('click', retryPuzzle);

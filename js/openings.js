@@ -2,6 +2,13 @@
 // data (js/openings-data.js) and replays any variation move by move on its own
 // chessboard.js instance, independent from the analysis screen's board.
 
+// Order the three screens cycle through with the ◀ ▶ switcher in the header.
+const SCREENS = [
+  { id: 'analysis', label: 'Analyse de parties' },
+  { id: 'openings', label: 'Ouvertures' },
+  { id: 'puzzles', label: 'Entraînement' },
+];
+
 const opState = {
   board: null,
   screen: 'analysis',
@@ -20,8 +27,8 @@ document.addEventListener('DOMContentLoaded', initOpenings);
 function initOpenings() {
   opState.board = Chessboard('openingsBoard', { position: 'start', pieceTheme: PIECE_THEME });
 
-  document.getElementById('navAnalysisBtn').addEventListener('click', () => switchScreen('analysis'));
-  document.getElementById('navOpeningsBtn').addEventListener('click', () => switchScreen('openings'));
+  document.getElementById('screenPrevBtn').addEventListener('click', () => switchScreen(adjacentScreen(-1)));
+  document.getElementById('screenNextBtn').addEventListener('click', () => switchScreen(adjacentScreen(1)));
 
   document.getElementById('opPrevBtn').addEventListener('click', opPrev);
   document.getElementById('opNextBtn').addEventListener('click', opNext);
@@ -70,14 +77,19 @@ function initOpenings() {
   renderOpeningsList();
 }
 
+function adjacentScreen(dir) {
+  const i = SCREENS.findIndex((s) => s.id === opState.screen);
+  const next = SCREENS[(i + dir + SCREENS.length) % SCREENS.length];
+  return next.id;
+}
+
 function switchScreen(screen) {
   opState.screen = screen;
   document.getElementById('analysisScreen').classList.toggle('hidden', screen !== 'analysis');
   document.getElementById('openingsScreen').classList.toggle('hidden', screen !== 'openings');
   document.getElementById('puzzlesScreen').classList.toggle('hidden', screen !== 'puzzles');
-  document.getElementById('navAnalysisBtn').classList.toggle('active', screen === 'analysis');
-  document.getElementById('navOpeningsBtn').classList.toggle('active', screen === 'openings');
-  document.getElementById('navPuzzlesBtn').classList.toggle('active', screen === 'puzzles');
+  const current = SCREENS.find((s) => s.id === screen);
+  document.getElementById('screenSwitchLabel').textContent = current ? current.label : '';
   if (typeof updateHeaderVisibility === 'function') updateHeaderVisibility();
   // Every board was possibly created while its section was display:none, which makes
   // chessboard.js measure a 0-width container (see the analysis-board resize fix) —
@@ -195,6 +207,18 @@ function loadVariation(familyId, idx) {
   // Re-render the family list so the active family stays expanded and the picked
   // variation is visually marked, without losing the current filter selection.
   renderOpeningsList();
+  // Do this last: renderOpeningsList() can change the page's layout height above the
+  // board (expanding/collapsing <details>), which would throw off the scroll target if
+  // computed first.
+  scrollBoardIntoView();
+}
+
+function scrollBoardIntoView() {
+  const el = document.getElementById('openingsBoard');
+  if (!el) return;
+  const rect = el.getBoundingClientRect();
+  const fullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+  if (!fullyVisible) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function renderOpMoveList() {
