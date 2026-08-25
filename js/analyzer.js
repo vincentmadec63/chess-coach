@@ -423,10 +423,141 @@ const Analyzer = {
       blunders, mistakes, inaccuracies,
       totalErrors: allErrors.length,
       avgLoss: allErrors.length ? Math.round(totalLoss / allErrors.length) : 0,
+      diagnosisText: this.diagnose(allErrors),
     };
   },
 
   SEVERITY_WEIGHT: { blunder: 3, mistake: 2, inaccuracy: 1 },
+
+  // A theme like "Pièce laissée en prise (dame)" groups under the family "Pièce laissée
+  // en prise" for aggregation, while the piece detail is kept separately for phrasing.
+  themeFamily(theme) {
+    return theme.replace(/\s*\([^)]*\)\s*$/, '').trim();
+  },
+
+  FAMILY_INFO: {
+    'Pièce laissée en prise': {
+      label: 'tu laisses des pièces en prise',
+      advice: "Avant de jouer, prends l'habitude de vérifier si la pièce que tu viens de déplacer — ou une autre — reste attaquée sans défense suffisante.",
+    },
+    'Fourchette subie': {
+      label: 'tu te fais prendre dans des fourchettes',
+      advice: "Avant de bouger une pièce, regarde si la case où elle atterrit peut être attaquée par un cavalier ou un pion en même temps qu'une autre de tes pièces.",
+    },
+    'Mat manqué': {
+      label: 'tu rates des mats forcés',
+      advice: "Quand l'adversaire est en difficulté, prends quelques secondes de plus pour chercher un mat forcé avant de jouer le premier coup correct qui te vient à l'esprit.",
+    },
+    'Mat au couloir': {
+      label: 'tu te fais mater au couloir',
+      advice: "Pense à donner une case de fuite à ton roi (souvent h3/h6) avant que la dernière rangée ne devienne un problème.",
+    },
+    'Mat forcé subi': {
+      label: "tu laisses l'adversaire forcer le mat",
+      advice: "Même quand c'est toi qui attaques, vérifie la sécurité de ton propre roi à chaque coup — c'est souvent lui qu'on oublie de défendre.",
+    },
+    'Erreur en finale': {
+      label: 'tes erreurs se concentrent en finale',
+      advice: "Travaille les finales de base (roi et pions, finales de tours) : c'est souvent là que des parties à égalité basculent.",
+    },
+    'Erreur tactique': {
+      label: "tes erreurs ne rentrent pas dans un motif classique (pièce en prise, fourchette, mat)",
+      advice: "Ralentis sur les positions calmes et vérifie systématiquement les menaces de l'adversaire avant de jouer, même quand rien ne semble se passer.",
+    },
+  },
+
+  PIECE_ARTICLE_FR: { pion: 'ton', cavalier: 'ton', fou: 'ton', tour: 'ta', dame: 'ta', roi: 'ton' },
+
+  // Turns the raw error list into a short written diagnosis of what's actually going
+  // wrong for this player — the "so what" a bar chart of theme counts can't give on its
+  // own. Picks the single costliest weakness (weighted by severity, not just frequency),
+  // then adds whichever secondary signals (game phase, blunder-vs-inaccuracy mix, color,
+  // repeated positions) are strong enough to be worth a sentence.
+  diagnose(allErrors) {
+    if (!allErrors.length) return "Importe quelques parties pour obtenir un diagnostic.";
+    if (allErrors.length < 5) {
+      return "Pas encore assez de données pour un diagnostic fiable — importe davantage de parties pour affiner l'analyse.";
+    }
+
+    const familyScore = {};
+    const familyCount = {};
+    const pieceCountByFamily = {};
+    const phaseCount = { ouverture: 0, milieu: 0, finale: 0 };
+    const colorCount = { w: 0, b: 0 };
+    let blunders = 0, inaccuracies = 0;
+
+    allErrors.forEach((err) => {
+      const family = this.themeFamily(err.theme);
+      familyScore[family] = (familyScore[family] || 0) + (this.SEVERITY_WEIGHT[err.severity] || 1);
+      familyCount[family] = (familyCount[family] || 0) + 1;
+
+      const pieceMatch = err.theme.match(/\(([^)]+)\)\s*$/);
+      if (pieceMatch) {
+        pieceCountByFamily[family] = pieceCountByFamily[family] || {};
+        pieceCountByFamily[family][pieceMatch[1]] = (pieceCountByFamily[family][pieceMatch[1]] || 0) + 1;
+      }
+
+      const phase = family === 'Erreur en finale' ? 'finale' : (err.moveNumber <= 10 ? 'ouverture' : 'milieu');
+      phaseCount[phase]++;
+      if (err.color === 'w' || err.color === 'b') colorCount[err.color]++;
+      if (err.severity === SEVERITY.BLUNDER) blunders++;
+      else if (err.severity === SEVERITY.INACCURACY) inaccuracies++;
+    });
+
+    const families = Object.keys(familyScore).sort((a, b) => familyScore[b] - familyScore[a]);
+    const topFamily = families[0];
+    const topCount = familyCount[topFamily];
+    const topPct = Math.round((topCount / allErrors.length) * 100);
+    const info = this.FAMILY_INFO[topFamily] || { label: topFamily, advice: '' };
+
+    let text = 'Ton principal problème : ' + info.label + ' (' + topCount + ' fois sur ' + allErrors.length + ' erreurs détectées, ' + topPct + '%).';
+
+    const pieces = pieceCountByFamily[topFamily]
+      ? Object.entries(pieceCountByFamily[topFamily]).sort((a, b) => b[1] - a[1])
+      : null;
+    if (pieces && pieces.length) {
+      const named = pieces.slice(0, 2).map(([p]) => (this.PIECE_ARTICLE_FR[p] || 'ta') + ' ' + p);
+      text += ' Le plus souvent ' + named.join(' ou ') + '.';
+    }
+
+    if (allErrors.length >= 8) {
+      const blunderShare = blunders / allErrors.length;
+      const inaccuracyShare = inaccuracies / allErrors.length;
+      if (blunderShare >= 0.45) {
+        text += ' Plus de la moitié de tes erreurs sont de vraies gaffes (perte nette, pas juste imprécise) : le souci semble être la vérification de tes coups avant de jouer, pas la compréhension stratégique.';
+      } else if (inaccuracyShare >= 0.5) {
+        text += ' La majorité de tes erreurs restent de petites imprécisions plutôt que de vraies gaffes : c\'est davantage une question de précision positionnelle que de calcul qui plante.';
+      }
+    }
+
+    const phaseTotal = phaseCount.ouverture + phaseCount.milieu + phaseCount.finale;
+    const phaseEntries = Object.entries(phaseCount).sort((a, b) => b[1] - a[1]);
+    const topPhase = phaseEntries[0];
+    if (topPhase && phaseTotal > 0 && topPhase[1] / phaseTotal >= 0.45) {
+      const phaseLabel = {
+        ouverture: "dans l'ouverture (avant le coup 10)",
+        milieu: 'en milieu de partie',
+        finale: 'en finale',
+      }[topPhase[0]];
+      text += ' Ça se produit surtout ' + phaseLabel + ' (' + Math.round((topPhase[1] / phaseTotal) * 100) + '% de tes erreurs).';
+    }
+
+    if (colorCount.w >= 3 && colorCount.b >= 3) {
+      const whitePct = colorCount.w / (colorCount.w + colorCount.b);
+      if (whitePct >= 0.65) text += ' Tu commets aussi nettement plus d\'erreurs avec les Blancs qu\'avec les Noirs.';
+      else if (whitePct <= 0.35) text += ' Tu commets aussi nettement plus d\'erreurs avec les Noirs qu\'avec les Blancs.';
+    }
+
+    const recurring = this.findRecurringPositions(allErrors, 2);
+    if (recurring.length) {
+      text += ' ' + recurring.length + ' position' + (recurring.length > 1 ? 's' : '') +
+        ' où tu refais exactement la même erreur plusieurs fois — regarde "Erreurs récurrentes" ci-dessous, c\'est le plus rapide à corriger.';
+    }
+
+    if (info.advice) text += ' ' + info.advice;
+
+    return text;
+  },
 
   // Board + side-to-move + castling rights + en-passant target — i.e. everything that
   // defines "the same position", but ignoring the halfmove/fullmove counters so the

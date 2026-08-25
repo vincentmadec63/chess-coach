@@ -148,19 +148,7 @@ function renderErrorList(state) {
 function renderSummary(summary) {
   const panel = document.getElementById('summaryPanel');
   panel.classList.remove('hidden');
-  const chart = document.getElementById('themeChart');
-  chart.innerHTML = '';
-  const max = summary.topThemes.length ? summary.topThemes[0].count : 1;
-  summary.topThemes.forEach((t) => {
-    const pct = Math.round((t.count / max) * 100);
-    const row = document.createElement('div');
-    row.className = 'theme-row';
-    row.innerHTML =
-      '<span class="theme-label">' + escapeHtml(t.theme) + '</span>' +
-      '<div class="theme-bar-track"><div class="theme-bar-fill" style="width:' + pct + '%"></div></div>' +
-      '<span class="theme-count">' + t.count + '</span>';
-    chart.appendChild(row);
-  });
+  document.getElementById('diagnosisBox').textContent = summary.diagnosisText || '';
   const stats = document.getElementById('summaryStats');
   stats.innerHTML =
     statHtml(summary.totalErrors, 'Erreurs détectées') +

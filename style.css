@@ -112,12 +112,10 @@ main{max-width:1180px;margin:0 auto;padding:24px;}
   padding:20px;margin-bottom:24px;
 }
 .summary-panel h2{margin-top:0;font-size:17px;}
-.theme-chart{display:flex;flex-direction:column;gap:10px;margin:16px 0;}
-.theme-row{display:flex;align-items:center;gap:10px;}
-.theme-label{width:220px;font-size:13.5px;color:var(--text);flex-shrink:0;}
-.theme-bar-track{flex:1;background:var(--bg-panel-2);border-radius:6px;height:22px;overflow:hidden;position:relative;}
-.theme-bar-fill{height:100%;background:linear-gradient(90deg,var(--danger),var(--warn));border-radius:6px;}
-.theme-count{width:34px;text-align:right;font-size:13px;color:var(--text-dim);flex-shrink:0;}
+.diagnosis-box{
+  margin:16px 0;padding:14px 16px;background:var(--bg-panel-2);border-left:3px solid var(--accent);
+  border-radius:6px;font-size:14.5px;line-height:1.65;color:var(--text);
+}
 .summary-stats{display:flex;gap:24px;flex-wrap:wrap;margin-top:14px;border-top:1px solid var(--border);padding-top:14px;}
 .stat{display:flex;flex-direction:column;gap:2px;}
 .stat-value{font-size:22px;font-weight:700;}
