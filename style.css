@@ -354,4 +354,16 @@ main{max-width:1180px;margin:0 auto;padding:24px;}
   .side-col{min-width:0;}
   main, .openings-workspace{padding:14px;}
   .import-bar input[type="text"]{min-width:0;flex:1 1 140px;}
+  /* The prev/move-info/next row is fine at desktop width, but on a phone the two
+     buttons leave the move description squeezed into a ~110px wrapped column —
+     stack it instead: move info on its own full-width line, buttons below it. */
+  .board-controls{flex-wrap:wrap;justify-content:center;}
+  .board-controls #moveInfo{flex:1 1 100%;order:-1;margin-bottom:6px;}
+  /* The family name competes with the color badge + ECO code for one row's width and
+     was getting ellipsis-truncated (e.g. "Est-Indienne (King's...") — give the name
+     (the one thing that actually matters here) its own full-width line instead. */
+  .op-family summary{flex-wrap:wrap;row-gap:4px;}
+  .op-family-name-row{flex:1 1 100%;}
+  .op-family-name{overflow:visible;white-space:normal;}
+  .op-family-eco{flex:1 1 100%;text-align:right;}
 }
