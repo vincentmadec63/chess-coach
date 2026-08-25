@@ -129,4 +129,27 @@ const GameCache = {
     keys.forEach((k) => localStorage.removeItem(k));
     return keys.length;
   },
+
+  // Flattens every error from every cached game into one pool, for features that need
+  // "all mistakes you've ever had analyzed" rather than a specific game list — e.g. the
+  // puzzle trainer. Unlike getAllGames(), this doesn't require the full game metadata
+  // (opponent/result/etc.) to have been cached, so it also picks up older entries.
+  getAllErrors() {
+    const out = [];
+    this.allKeys().forEach((k) => {
+      let raw;
+      try {
+        raw = JSON.parse(localStorage.getItem(k));
+      } catch (e) {
+        return;
+      }
+      if (!raw || raw.version !== this.VERSION || raw.depth !== Analyzer.DEPTH || !raw.errors) return;
+      const gameUrl = raw.url || k.slice(this.PREFIX.length);
+      raw.errors.forEach((err) => {
+        if (!err.bestMoveBefore || !err.fenBefore) return;
+        out.push(Object.assign({ gameUrl }, err));
+      });
+    });
+    return out;
+  },
 };

@@ -74,13 +74,16 @@ function switchScreen(screen) {
   opState.screen = screen;
   document.getElementById('analysisScreen').classList.toggle('hidden', screen !== 'analysis');
   document.getElementById('openingsScreen').classList.toggle('hidden', screen !== 'openings');
+  document.getElementById('puzzlesScreen').classList.toggle('hidden', screen !== 'puzzles');
   document.getElementById('navAnalysisBtn').classList.toggle('active', screen === 'analysis');
   document.getElementById('navOpeningsBtn').classList.toggle('active', screen === 'openings');
-  // Both boards were possibly created while their section was display:none, which
-  // makes chessboard.js measure a 0-width container (see the analysis-board resize
-  // fix) — re-measure whichever board just became visible.
+  document.getElementById('navPuzzlesBtn').classList.toggle('active', screen === 'puzzles');
+  // Every board was possibly created while its section was display:none, which makes
+  // chessboard.js measure a 0-width container (see the analysis-board resize fix) —
+  // re-measure whichever board just became visible.
   if (screen === 'analysis' && state.board) state.board.resize();
   if (screen === 'openings' && opState.board) opState.board.resize();
+  if (screen === 'puzzles' && typeof onEnterPuzzlesScreen === 'function') onEnterPuzzlesScreen();
 }
 
 function categoryOf(family) {

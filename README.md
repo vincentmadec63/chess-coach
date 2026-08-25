@@ -25,6 +25,28 @@ script après toute modification du fichier de données. C'est un répertoire vo
 lignes principales des ouvertures les plus courantes, pas toutes les transpositions et
 variantes rares.
 
+## Écran Entraînement (puzzles)
+
+Bouton **Entraînement**. Pas de base de puzzles séparée : chaque erreur déjà détectée
+dans tes parties analysées (n'importe laquelle, dans n'importe quelle partie en cache)
+devient un puzzle — "voici la position juste avant l'erreur, trouve le coup que tu
+aurais dû jouer". Glisse une pièce sur l'échiquier pour répondre.
+
+- **Niveau adaptatif** : comme sur lichess/chess.com, un rating (départ 1200) s'ajuste
+  après chaque tentative selon une formule Elo — résoudre un puzzle plus difficile que
+  ton niveau le fait monter davantage, rater un puzzle facile le fait baisser davantage.
+  Les puzzles proposés sont toujours tirés au sort parmi les plus proches de ce niveau,
+  donc la difficulté suit automatiquement tes progrès.
+- **Points** : +10 de base par puzzle réussi, plus un bonus selon la difficulté et ta
+  série de réussites en cours (🔥). Rien en cas d'échec, et la série repart à zéro.
+- Stats persistées (`localStorage`) : niveau, points, série en cours, meilleure série,
+  puzzles résolus/tentés, taux de réussite.
+- La difficulté d'un puzzle est dérivée de l'ampleur de l'erreur d'origine (perte en
+  centipawns mesurée par Stockfish pendant l'analyse) — pas une classification manuelle.
+
+Sans parties analysées en cache, l'onglet affiche un message t'invitant à en importer
+d'abord dans **Analyse de parties**.
+
 ## Lancer l'appli
 
 **Double-clique sur `start.bat`.** Il ouvre automatiquement http://localhost:5177 dans ton

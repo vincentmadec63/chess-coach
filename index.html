@@ -27,6 +27,7 @@
   <div class="screen-nav">
     <button class="screen-nav-btn active" id="navAnalysisBtn" data-screen="analysis">Analyse de parties</button>
     <button class="screen-nav-btn" id="navOpeningsBtn" data-screen="openings">Ouvertures</button>
+    <button class="screen-nav-btn" id="navPuzzlesBtn" data-screen="puzzles">Entraînement</button>
   </div>
   <div class="import-bar">
     <input id="username" type="text" placeholder="Ton pseudo chess.com" autocomplete="off">
@@ -177,6 +178,55 @@
     </div>
   </section>
 </div>
+
+<div id="puzzlesScreen" class="hidden">
+  <section class="workspace puzzles-workspace">
+    <div class="board-col">
+      <div id="puzzleBoard" class="board"></div>
+
+      <div class="puzzle-status-row">
+        <span class="puzzle-badge" title="S'ajuste automatiquement selon tes résultats">Niveau <strong id="puzzleRatingValue">1200</strong></span>
+        <span class="puzzle-badge puzzle-badge-points">🏆 <strong id="puzzlePointsValue">0</strong> pts</span>
+        <span class="puzzle-badge puzzle-badge-streak">🔥 <strong id="puzzleStreakValue">0</strong></span>
+      </div>
+
+      <p class="puzzle-prompt" id="puzzlePrompt">Trouve le meilleur coup pour les <span id="puzzleColorLabel">Blancs</span></p>
+
+      <div id="puzzleFeedback" class="explain-box puzzle-feedback hidden"></div>
+
+      <div class="puzzle-actions">
+        <button id="puzzleSkipBtn" class="ghost-btn">Passer ce puzzle</button>
+        <button id="puzzleNextBtn" class="hidden">Puzzle suivant ▶</button>
+      </div>
+    </div>
+
+    <div class="side-col">
+      <div class="op-intro-box" id="puzzleIntroBox">
+        <h2>Entraînement</h2>
+        <p>Des positions tirées de tes propres parties analysées, là où une erreur a été commise. Trouve le meilleur
+        coup — le niveau proposé s'ajuste automatiquement à tes résultats, comme sur les sites d'échecs en ligne.</p>
+      </div>
+
+      <div class="puzzle-stats-box" id="puzzleStatsBox">
+        <div class="puzzle-stat"><span class="puzzle-stat-value" id="puzzleSolvedValue">0</span><span class="puzzle-stat-label">Résolus</span></div>
+        <div class="puzzle-stat"><span class="puzzle-stat-value" id="puzzleAttemptedValue">0</span><span class="puzzle-stat-label">Tentés</span></div>
+        <div class="puzzle-stat"><span class="puzzle-stat-value" id="puzzleAccuracyValue">—</span><span class="puzzle-stat-label">Réussite</span></div>
+        <div class="puzzle-stat"><span class="puzzle-stat-value" id="puzzleBestStreakValue">0</span><span class="puzzle-stat-label">Meilleure série</span></div>
+      </div>
+
+      <div class="puzzle-theme-box hidden" id="puzzleThemeBox">
+        <span class="puzzle-theme-label">Thème de ce puzzle</span>
+        <span id="puzzleThemeValue"></span>
+      </div>
+
+      <div class="puzzle-empty hidden" id="puzzleEmptyBox">
+        <p>Aucun puzzle disponible pour l'instant — importe et analyse au moins quelques parties dans l'onglet
+        <strong>Analyse de parties</strong> pour que l'entraînement ait de la matière (chaque erreur détectée
+        devient un puzzle potentiel).</p>
+      </div>
+    </div>
+  </section>
+</div>
 </main>
 
 <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -192,5 +242,6 @@
 <script src="js/openings-data.js"></script>
 <script src="js/favorites.js"></script>
 <script src="js/openings.js"></script>
+<script src="js/puzzles.js"></script>
 </body>
 </html>

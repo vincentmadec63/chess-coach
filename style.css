@@ -350,9 +350,62 @@ main{max-width:1180px;margin:0 auto;padding:24px;}
 
 /* Phones: .side-col's desktop min-width (sized for a two-column layout) is wider than
    the viewport once it wraps to a single column, causing horizontal overflow. */
+/* Puzzle trainer */
+.puzzles-workspace{max-width:1180px;margin:0 auto;padding:24px;align-items:flex-start;}
+
+.puzzle-status-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.puzzle-badge{
+  background:var(--bg-panel);border:1px solid var(--border);border-radius:20px;
+  padding:6px 12px;font-size:12.5px;color:var(--text-dim);
+}
+.puzzle-badge strong{color:var(--text);font-size:14px;}
+.puzzle-badge-points strong{color:var(--warn);}
+.puzzle-badge-streak strong{color:var(--danger);}
+
+.puzzle-prompt{font-size:14.5px;color:var(--text);margin:12px 0 0;line-height:1.5;}
+.puzzle-prompt span{font-weight:700;color:var(--accent);}
+
+.puzzle-feedback{margin-top:12px;}
+.puzzle-feedback.is-correct{border-color:var(--ok);}
+.puzzle-feedback.is-incorrect{border-color:var(--danger);}
+.puzzle-feedback-title{font-weight:700;margin:0 0 6px;font-size:14px;}
+.puzzle-feedback.is-correct .puzzle-feedback-title{color:var(--ok);}
+.puzzle-feedback.is-incorrect .puzzle-feedback-title{color:var(--danger);}
+.puzzle-feedback-body{margin:0;font-size:13px;color:var(--text-dim);line-height:1.5;}
+.puzzle-feedback-delta{font-size:12px;margin-top:8px;color:var(--text-dim);}
+.puzzle-feedback-delta strong{color:var(--text);}
+
+.puzzle-actions{display:flex;gap:8px;margin-top:14px;}
+.puzzle-actions button{
+  flex:1;padding:10px 14px;border-radius:8px;border:1px solid var(--border);
+  background:var(--bg-panel-2);color:var(--text);cursor:pointer;font-size:13.5px;
+}
+.puzzle-actions #puzzleNextBtn{background:var(--accent);color:#0a0d10;border-color:var(--accent);font-weight:600;}
+.puzzle-actions button:hover{filter:brightness(1.1);}
+
+.puzzle-stats-box{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;
+  padding:16px 18px;margin-bottom:16px;
+}
+.puzzle-stat{display:flex;flex-direction:column;gap:2px;}
+.puzzle-stat-value{font-size:20px;font-weight:700;}
+.puzzle-stat-label{font-size:11.5px;color:var(--text-dim);}
+
+.puzzle-theme-box{
+  background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;
+  padding:12px 16px;font-size:13px;margin-bottom:16px;
+}
+.puzzle-theme-label{color:var(--text-dim);margin-right:6px;}
+
+.puzzle-empty{
+  background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;
+  padding:16px 18px;color:var(--text-dim);font-size:13px;line-height:1.6;
+}
+
 @media (max-width: 480px){
   .side-col{min-width:0;}
-  main, .openings-workspace{padding:14px;}
+  main, .openings-workspace, .puzzles-workspace{padding:14px;}
   .import-bar input[type="text"]{min-width:0;flex:1 1 140px;}
   /* The prev/move-info/next row is fine at desktop width, but on a phone the two
      buttons leave the move description squeezed into a ~110px wrapped column —
