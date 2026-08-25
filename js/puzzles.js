@@ -72,6 +72,9 @@ const puzState = {
   current: null,
   solved: false,
   selectedSquare: null,  // tap-to-move: square of the piece currently picked up, if any
+  touchStart: null,      // {x, y, square} — tracked manually, see onPuzzleBoardTouchStart
+  lastTouchTapAt: 0,     // timestamp of the last tap handled via touch, to swallow the
+                         // delayed synthetic 'click' some browsers still fire after it
 };
 
 document.addEventListener('DOMContentLoaded', initPuzzles);
@@ -89,13 +92,22 @@ function initPuzzles() {
   // dragging fiddly on a phone — same interaction chess.com/lichess offer alongside
   // drag. chessboard.js only wires its own touch/mouse handling to squares that have a
   // piece on them (see touchstartSquare in the vendored lib), so a tap on an *empty*
-  // destination square never reaches it — this delegated click listener is what catches
-  // that. It coexists with dragging: a real drag ends with mouseup/touchend on a
-  // different square than it started on, which never fires a native 'click' at all, so
-  // there's no double-handling. A source-square tap alone (no movement) does reach
-  // chessboard.js's onDrop as a source===target "drop" — puzzleOnDrop() ignores that
-  // case on purpose so this click handler stays the single source of truth for taps.
-  document.getElementById('puzzleBoard').addEventListener('click', onPuzzleBoardClick);
+  // destination square never reaches it — the listeners below are what catch that.
+  //
+  // On touch devices this is handled via raw touchstart/touchend, NOT the synthetic
+  // 'click' event: the board has touch-action:none (needed so dragging doesn't scroll
+  // the page), and on real iOS Safari that also suppresses the synthetic click a plain
+  // tap would otherwise fire — so a click-only implementation silently does nothing on
+  // an iPhone even though it worked in every non-touch test. Distance between
+  // touchstart/touchend (not "did chessboard.js call onDrop") decides tap vs drag: a
+  // real drag is left entirely to chessboard.js's own handling; only a tap (movement
+  // under the threshold) is turned into a select/move here. lastTouchTapAt then makes
+  // the 'click' listener (kept for desktop mice) ignore the delayed synthetic click
+  // that may still follow.
+  const boardEl = document.getElementById('puzzleBoard');
+  boardEl.addEventListener('touchstart', onPuzzleBoardTouchStart, { passive: true });
+  boardEl.addEventListener('touchend', onPuzzleBoardTouchEnd);
+  boardEl.addEventListener('click', onPuzzleBoardClick);
   document.getElementById('navPuzzlesBtn').addEventListener('click', () => switchScreen('puzzles'));
   document.getElementById('puzzleSkipBtn').addEventListener('click', loadNextPuzzle);
   document.getElementById('puzzleNextBtn').addEventListener('click', loadNextPuzzle);
@@ -229,10 +241,44 @@ function attemptPuzzleMove(from, to) {
   return true;
 }
 
+// Distance-based tap detection, independent of chessboard.js's own drag state — see the
+// comment in initPuzzles() for why this can't just rely on the synthetic 'click' event.
+const TAP_MOVE_THRESHOLD_PX = 12;
+
+function onPuzzleBoardTouchStart(e) {
+  if (e.touches.length !== 1) {
+    puzState.touchStart = null;
+    return;
+  }
+  const squareEl = e.target && e.target.closest && e.target.closest('[data-square]');
+  const t = e.touches[0];
+  puzState.touchStart = { x: t.clientX, y: t.clientY, square: squareEl ? squareEl.dataset.square : null };
+}
+
+function onPuzzleBoardTouchEnd(e) {
+  const start = puzState.touchStart;
+  puzState.touchStart = null;
+  if (!start || !start.square || e.changedTouches.length !== 1) return;
+
+  const t = e.changedTouches[0];
+  const moved = Math.abs(t.clientX - start.x) > TAP_MOVE_THRESHOLD_PX || Math.abs(t.clientY - start.y) > TAP_MOVE_THRESHOLD_PX;
+  // Real drags are left entirely to chessboard.js's own touch handling (already wired
+  // via draggable:true) — this listener only acts on the "didn't really move" case.
+  if (moved) return;
+
+  puzState.lastTouchTapAt = Date.now();
+  handlePuzzleTap(start.square);
+}
+
 function onPuzzleBoardClick(e) {
+  if (Date.now() - puzState.lastTouchTapAt < 500) return; // already handled as a touch tap
   const squareEl = e.target.closest('[data-square]');
-  if (!squareEl || !puzState.current || puzState.solved || !puzState.chess) return;
-  const square = squareEl.dataset.square;
+  if (!squareEl) return;
+  handlePuzzleTap(squareEl.dataset.square);
+}
+
+function handlePuzzleTap(square) {
+  if (!puzState.current || puzState.solved || !puzState.chess) return;
   const sideToMove = puzState.chess.turn();
   const pieceHere = puzState.chess.get(square);
 
