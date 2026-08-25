@@ -111,6 +111,7 @@ function initPuzzles() {
   document.getElementById('navPuzzlesBtn').addEventListener('click', () => switchScreen('puzzles'));
   document.getElementById('puzzleSkipBtn').addEventListener('click', loadNextPuzzle);
   document.getElementById('puzzleNextBtn').addEventListener('click', loadNextPuzzle);
+  document.getElementById('puzzleRetryBtn').addEventListener('click', retryPuzzle);
   document.getElementById('puzzleHintBtn').addEventListener('click', showPuzzleHint);
 
   renderPuzzleStats();
@@ -193,6 +194,7 @@ function loadNextPuzzle() {
   document.getElementById('puzzleHintText').classList.add('hidden');
   document.getElementById('puzzleSkipBtn').classList.remove('hidden');
   document.getElementById('puzzleHintBtn').classList.remove('hidden');
+  document.getElementById('puzzleRetryBtn').classList.add('hidden');
   document.getElementById('puzzleNextBtn').classList.add('hidden');
 
   if (puzzle.theme) {
@@ -345,7 +347,30 @@ function resolvePuzzleAttempt(correct, from, to, resultFen) {
 
   document.getElementById('puzzleSkipBtn').classList.add('hidden');
   document.getElementById('puzzleHintBtn').classList.add('hidden');
+  document.getElementById('puzzleRetryBtn').classList.remove('hidden');
   document.getElementById('puzzleNextBtn').classList.remove('hidden');
+}
+
+// Replays the same puzzle from scratch — useful right after a miss to actually find the
+// right move before moving on. Doesn't touch the pool/attemptedKeys or PuzzleProgress:
+// a retry is practice, not a new scored attempt (otherwise you could farm points by just
+// retrying until correct).
+function retryPuzzle() {
+  const puzzle = puzState.current;
+  if (!puzzle) return;
+
+  puzState.solved = false;
+  puzState.chess = new Chess(puzzle.fenBefore);
+
+  clearPuzzleHighlights();
+  puzState.board.position(puzzle.fenBefore, false);
+
+  document.getElementById('puzzleFeedback').classList.add('hidden');
+  document.getElementById('puzzleHintText').classList.add('hidden');
+  document.getElementById('puzzleSkipBtn').classList.remove('hidden');
+  document.getElementById('puzzleHintBtn').classList.remove('hidden');
+  document.getElementById('puzzleRetryBtn').classList.add('hidden');
+  document.getElementById('puzzleNextBtn').classList.add('hidden');
 }
 
 function renderPuzzleFeedback(correct, puzzle, pointsGained, stats) {

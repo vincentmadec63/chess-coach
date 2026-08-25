@@ -16,6 +16,10 @@
 
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
+/* Rapid taps on any button (e.g. spamming "coup suivant") get read by mobile browsers as
+   a double-tap-to-zoom gesture by default. manipulation keeps pinch-zoom elsewhere on the
+   page but tells the browser this element's own taps aren't a zoom trigger. */
+button{touch-action:manipulation;}
 body{
   background:var(--bg);
   color:var(--text);
