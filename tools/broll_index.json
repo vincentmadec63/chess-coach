@@ -1,0 +1,4944 @@
+{
+"version": 1,
+"note": "Catalogue des plans officiels Rockstar (page médias GTA VI). Minutages en secondes.",
+"base": {
+"V": "https://media-rockstargames-com.akamaized.net/VI/downloads"
+},
+"shots": [
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 3.0,
+"d": 3.9,
+"x": 0.5,
+"tags": [
+"keys",
+"marina",
+"aerial",
+"day",
+"road",
+"sign"
+],
+"q": 3,
+"group": "LT",
+"desc": "Panneau The Keys puis marina vue du ciel"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 7.05,
+"d": 2.85,
+"x": 0.7,
+"tags": [
+"jason",
+"boat",
+"closeup"
+],
+"q": 2,
+"group": "LT",
+"desc": "Jason polit un bateau, gros plan"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 10.05,
+"d": 1.8,
+"x": 0.55,
+"tags": [
+"boat",
+"interior"
+],
+"q": 2,
+"group": "LT",
+"desc": "Bateau au hangar"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 11.95,
+"d": 2.2,
+"x": 0.6,
+"tags": [
+"jason",
+"marina",
+"day",
+"phone"
+],
+"q": 3,
+"group": "LT",
+"desc": "Jason au téléphone sur la marina"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 14.25,
+"d": 0.85,
+"x": 0.4,
+"tags": [
+"keys",
+"water",
+"plane",
+"day"
+],
+"q": 2,
+"group": "LT",
+"desc": "Hydravion sur l'eau turquoise"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 18.0,
+"d": 0.9,
+"x": 0.5,
+"tags": [
+"city",
+"night",
+"aerial",
+"vicecity"
+],
+"q": 3,
+"group": "LT",
+"desc": "Vice City de nuit vue du ciel"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 19.2,
+"d": 1.9,
+"x": 0.4,
+"tags": [
+"car",
+"lowrider",
+"crew",
+"day"
+],
+"q": 2,
+"group": "LT",
+"desc": "Lowrider vert et son équipage"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 21.25,
+"d": 1.55,
+"x": 0.55,
+"tags": [
+"wildlife",
+"iguana",
+"car",
+"street",
+"keys"
+],
+"q": 2,
+"group": "LT",
+"desc": "Iguane sur la route, voiture rouge"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 26.45,
+"d": 1.3,
+"x": 0.35,
+"tags": [
+"couple",
+"lucia",
+"jason",
+"car",
+"city",
+"day"
+],
+"q": 3,
+"group": "LT",
+"desc": "Lucia et Jason en décapotable"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 27.9,
+"d": 1.45,
+"x": 0.5,
+"tags": [
+"swamp",
+"sunset",
+"nature",
+"gun"
+],
+"q": 1,
+"group": "LT",
+"desc": "Marais au coucher du soleil, hommes armés"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 35.15,
+"d": 1.25,
+"x": 0.5,
+"tags": [
+"lucia",
+"heist",
+"interior",
+"vault"
+],
+"q": 2,
+"group": "LT",
+"desc": "Lucia devant une porte de coffre"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 38.05,
+"d": 0.9,
+"x": 0.5,
+"tags": [
+"nightlife",
+"club",
+"neon"
+],
+"q": 2,
+"group": "LT",
+"desc": "Club rouge, bras levés"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 39.05,
+"d": 1.3,
+"x": 0.5,
+"tags": [
+"plane",
+"action",
+"road",
+"day"
+],
+"q": 2,
+"group": "LT",
+"desc": "Avion qui frôle la route"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 40.5,
+"d": 1.75,
+"x": 0.25,
+"tags": [
+"couple",
+"jason",
+"lucia",
+"car",
+"port",
+"day"
+],
+"q": 3,
+"group": "LT",
+"desc": "Jason et Lucia près d'une voiture rouge"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 45.15,
+"d": 1.75,
+"x": 0.5,
+"tags": [
+"nightlife",
+"club",
+"neon"
+],
+"q": 2,
+"group": "LT",
+"desc": "Danseuse dans un club rose"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 47.05,
+"d": 1.8,
+"x": 0.6,
+"tags": [
+"city",
+"street",
+"day",
+"vicecity",
+"police"
+],
+"q": 3,
+"group": "LT",
+"desc": "Rue Art déco de Vice City"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 48.95,
+"d": 1.85,
+"x": 0.5,
+"tags": [
+"bike",
+"stunt",
+"action",
+"city",
+"day"
+],
+"q": 3,
+"group": "LT",
+"desc": "Moto qui saute au-dessus du métro"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 53.0,
+"d": 1.15,
+"x": 0.5,
+"tags": [
+"action",
+"explosion",
+"night",
+"violent"
+],
+"q": 1,
+"group": "LT",
+"desc": "Explosion sur un toit, arme"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 55.25,
+"d": 1.75,
+"x": 0.3,
+"tags": [
+"beach",
+"plane",
+"crowd",
+"day",
+"vicecity"
+],
+"q": 3,
+"group": "LT",
+"desc": "Plage bondée, avion à fumée rose"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 57.15,
+"d": 1.3,
+"x": 0.5,
+"tags": [
+"gym",
+"interior",
+"character"
+],
+"q": 2,
+"group": "LT",
+"desc": "Salle de muscu"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 62.0,
+"d": 1.1,
+"x": 0.5,
+"tags": [
+"night",
+"crew",
+"gun",
+"violent"
+],
+"q": 1,
+"group": "LT",
+"desc": "Bande armée de nuit"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 63.2,
+"d": 0.8,
+"x": 0.8,
+"tags": [
+"lucia",
+"sunset",
+"city"
+],
+"q": 2,
+"group": "LT",
+"desc": "Lucia sur un toit au coucher du soleil"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 64.05,
+"d": 0.85,
+"x": 0.5,
+"tags": [
+"car",
+"night"
+],
+"q": 1,
+"group": "LT",
+"desc": "Feux arrière de nuit"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 67.1,
+"d": 1.4,
+"x": 0.55,
+"tags": [
+"couple",
+"romance",
+"sunset"
+],
+"q": 3,
+"group": "LT",
+"desc": "Jason et Lucia enlacés au coucher du soleil"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 68.6,
+"d": 1.4,
+"x": 0.5,
+"tags": [
+"action",
+"skyscraper",
+"night",
+"heist"
+],
+"q": 2,
+"group": "LT",
+"desc": "Vitre qui explose sur un gratte-ciel"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 70.9,
+"d": 1.1,
+"x": 0.5,
+"tags": [
+"car",
+"night",
+"road"
+],
+"q": 2,
+"group": "LT",
+"desc": "Voiture de nuit, phares"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+"t": 72.85,
+"d": 0.9,
+"x": 0.5,
+"tags": [
+"lucia",
+"gun",
+"explosion",
+"violent"
+],
+"q": 1,
+"group": "LT",
+"desc": "Lucia tire, explosion"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Out_Now/GTAVI_Out_Now.mp4",
+"t": 3.05,
+"d": 2.05,
+"x": 0.4,
+"tags": [
+"nightlife",
+"club",
+"neon"
+],
+"q": 2,
+"group": "ON",
+"desc": "Club néon"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Out_Now/GTAVI_Out_Now.mp4",
+"t": 5.25,
+"d": 1.45,
+"x": 0.5,
+"tags": [
+"city",
+"vicecity",
+"day",
+"crowd",
+"pier"
+],
+"q": 3,
+"group": "ON",
+"desc": "Jetée et grande roue de Vice City"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Out_Now/GTAVI_Out_Now.mp4",
+"t": 9.1,
+"d": 0.9,
+"x": 0.5,
+"tags": [
+"character"
+],
+"q": 2,
+"group": "ON",
+"desc": "Personnage au bob"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Out_Now/GTAVI_Out_Now.mp4",
+"t": 11.25,
+"d": 1.35,
+"x": 0.4,
+"tags": [
+"boat",
+"yacht",
+"water",
+"day",
+"speed"
+],
+"q": 3,
+"group": "ON",
+"desc": "Yacht lancé à pleine vitesse"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Out_Now/GTAVI_Out_Now.mp4",
+"t": 12.75,
+"d": 1.3,
+"x": 0.5,
+"tags": [
+"boat",
+"yacht",
+"water",
+"day"
+],
+"q": 2,
+"group": "ON",
+"desc": "Yacht vu de l'arrière"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_Out_Now/GTAVI_Out_Now.mp4",
+"t": 19.1,
+"d": 0.8,
+"x": 0.5,
+"tags": [
+"city",
+"night",
+"car",
+"neon"
+],
+"q": 2,
+"group": "ON",
+"desc": "Rue de nuit, néons et voitures"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Boobie Ike/Boobie_Ike_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"boobie-ike"
+],
+"q": 1,
+"group": "people-boobie-ike",
+"desc": "People/Boobie Ike/Boobie_Ike_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Boobie Ike/Boobie_Ike_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"boobie-ike"
+],
+"q": 1,
+"group": "people-boobie-ike",
+"desc": "People/Boobie Ike/Boobie_Ike_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Boobie Ike/Boobie_Ike_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"boobie-ike"
+],
+"q": 1,
+"group": "people-boobie-ike",
+"desc": "People/Boobie Ike/Boobie_Ike_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Boobie Ike/Boobie_Ike_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"boobie-ike"
+],
+"q": 1,
+"group": "people-boobie-ike",
+"desc": "People/Boobie Ike/Boobie_Ike_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Brian Heder/Brian_Heder_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"brian-heder"
+],
+"q": 1,
+"group": "people-brian-heder",
+"desc": "People/Brian Heder/Brian_Heder_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Brian Heder/Brian_Heder_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"brian-heder"
+],
+"q": 1,
+"group": "people-brian-heder",
+"desc": "People/Brian Heder/Brian_Heder_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Brian Heder/Brian_Heder_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"brian-heder"
+],
+"q": 1,
+"group": "people-brian-heder",
+"desc": "People/Brian Heder/Brian_Heder_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Brian Heder/Brian_Heder_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"brian-heder"
+],
+"q": 1,
+"group": "people-brian-heder",
+"desc": "People/Brian Heder/Brian_Heder_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Cal Hampton/Cal_Hampton_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"cal-hampton"
+],
+"q": 1,
+"group": "people-cal-hampton",
+"desc": "People/Cal Hampton/Cal_Hampton_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Cal Hampton/Cal_Hampton_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"cal-hampton"
+],
+"q": 1,
+"group": "people-cal-hampton",
+"desc": "People/Cal Hampton/Cal_Hampton_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Cal Hampton/Cal_Hampton_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"cal-hampton"
+],
+"q": 1,
+"group": "people-cal-hampton",
+"desc": "People/Cal Hampton/Cal_Hampton_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Cal Hampton/Cal_Hampton_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"cal-hampton"
+],
+"q": 1,
+"group": "people-cal-hampton",
+"desc": "People/Cal Hampton/Cal_Hampton_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/DreQuan Priest/DreQuan_Priest_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"drequan-priest"
+],
+"q": 1,
+"group": "people-drequan-priest",
+"desc": "People/DreQuan Priest/DreQuan_Priest_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/DreQuan Priest/DreQuan_Priest_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"drequan-priest"
+],
+"q": 1,
+"group": "people-drequan-priest",
+"desc": "People/DreQuan Priest/DreQuan_Priest_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/DreQuan Priest/DreQuan_Priest_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"drequan-priest"
+],
+"q": 1,
+"group": "people-drequan-priest",
+"desc": "People/DreQuan Priest/DreQuan_Priest_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/DreQuan Priest/DreQuan_Priest_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"drequan-priest"
+],
+"q": 1,
+"group": "people-drequan-priest",
+"desc": "People/DreQuan Priest/DreQuan_Priest_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_05.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_06.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_07.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_07.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_08.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_08.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_09.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_09.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_10.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_10.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_11.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_11.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_12.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_12.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_13.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_13.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_14.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_14.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_15.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_15.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_16.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_16.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_17.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_17.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_18.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_18.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason Duval/Jason_Duval_19.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"jason"
+],
+"q": 1,
+"group": "people-jason-duval",
+"desc": "People/Jason Duval/Jason_Duval_19.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_06.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_07.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_07.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_08.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_08.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_09.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_09.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_10.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_10.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_11.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_11.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_12.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_12.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_13.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_13.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_14.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_14.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_15.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_15.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_16.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_16.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_17.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_17.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_18.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_18.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_19.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_19.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Jason and Lucia/Jason_and_Lucia_20.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"couple",
+"jason",
+"lucia"
+],
+"q": 1,
+"group": "people-jason-and-lucia",
+"desc": "People/Jason and Lucia/Jason_and_Lucia_20.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_06.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_07.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_07.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_08.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_08.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_09.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_09.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_10.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_10.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_11.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_11.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_12.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_12.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_13.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_13.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Lucia Caminos/Lucia_Caminos_14.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"lucia"
+],
+"q": 1,
+"group": "people-lucia-caminos",
+"desc": "People/Lucia Caminos/Lucia_Caminos_14.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Raul Bautista/Raul_Bautista_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"raul-bautista"
+],
+"q": 1,
+"group": "people-raul-bautista",
+"desc": "People/Raul Bautista/Raul_Bautista_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Raul Bautista/Raul_Bautista_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"raul-bautista"
+],
+"q": 1,
+"group": "people-raul-bautista",
+"desc": "People/Raul Bautista/Raul_Bautista_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Raul Bautista/Raul_Bautista_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"raul-bautista"
+],
+"q": 1,
+"group": "people-raul-bautista",
+"desc": "People/Raul Bautista/Raul_Bautista_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Raul Bautista/Raul_Bautista_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"raul-bautista"
+],
+"q": 1,
+"group": "people-raul-bautista",
+"desc": "People/Raul Bautista/Raul_Bautista_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Real Dimez/Real_Dimez_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"real-dimez"
+],
+"q": 1,
+"group": "people-real-dimez",
+"desc": "People/Real Dimez/Real_Dimez_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Real Dimez/Real_Dimez_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"real-dimez"
+],
+"q": 1,
+"group": "people-real-dimez",
+"desc": "People/Real Dimez/Real_Dimez_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Real Dimez/Real_Dimez_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"character",
+"real-dimez"
+],
+"q": 1,
+"group": "people-real-dimez",
+"desc": "People/Real Dimez/Real_Dimez_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#People/Real Dimez/Real_Dimez_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"character",
+"real-dimez"
+],
+"q": 1,
+"group": "people-real-dimez",
+"desc": "People/Real Dimez/Real_Dimez_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Ambrosia/Ambrosia_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"town",
+"rural"
+],
+"q": 1,
+"group": "place-ambrosia",
+"desc": "Places/Ambrosia/Ambrosia_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Ambrosia/Ambrosia_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"town",
+"rural"
+],
+"q": 1,
+"group": "place-ambrosia",
+"desc": "Places/Ambrosia/Ambrosia_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Ambrosia/Ambrosia_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"town",
+"rural"
+],
+"q": 1,
+"group": "place-ambrosia",
+"desc": "Places/Ambrosia/Ambrosia_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Ambrosia/Ambrosia_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"town",
+"rural"
+],
+"q": 1,
+"group": "place-ambrosia",
+"desc": "Places/Ambrosia/Ambrosia_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Ambrosia/Ambrosia_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"town",
+"rural"
+],
+"q": 1,
+"group": "place-ambrosia",
+"desc": "Places/Ambrosia/Ambrosia_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Ambrosia/Ambrosia_06.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"town",
+"rural"
+],
+"q": 1,
+"group": "place-ambrosia",
+"desc": "Places/Ambrosia/Ambrosia_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Grassrivers/Grassrivers_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"swamp",
+"nature",
+"wildlife"
+],
+"q": 1,
+"group": "place-grassrivers",
+"desc": "Places/Grassrivers/Grassrivers_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Grassrivers/Grassrivers_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"swamp",
+"nature",
+"wildlife"
+],
+"q": 1,
+"group": "place-grassrivers",
+"desc": "Places/Grassrivers/Grassrivers_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Grassrivers/Grassrivers_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"swamp",
+"nature",
+"wildlife"
+],
+"q": 1,
+"group": "place-grassrivers",
+"desc": "Places/Grassrivers/Grassrivers_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Grassrivers/Grassrivers_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"swamp",
+"nature",
+"wildlife"
+],
+"q": 1,
+"group": "place-grassrivers",
+"desc": "Places/Grassrivers/Grassrivers_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Grassrivers/Grassrivers_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"swamp",
+"nature",
+"wildlife"
+],
+"q": 1,
+"group": "place-grassrivers",
+"desc": "Places/Grassrivers/Grassrivers_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Grassrivers/Grassrivers_06.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"swamp",
+"nature",
+"wildlife"
+],
+"q": 1,
+"group": "place-grassrivers",
+"desc": "Places/Grassrivers/Grassrivers_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Grassrivers/Grassrivers_07.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"swamp",
+"nature",
+"wildlife"
+],
+"q": 1,
+"group": "place-grassrivers",
+"desc": "Places/Grassrivers/Grassrivers_07.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Grassrivers/Grassrivers_08.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"swamp",
+"nature",
+"wildlife"
+],
+"q": 1,
+"group": "place-grassrivers",
+"desc": "Places/Grassrivers/Grassrivers_08.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Leonida Keys/Leonida_Keys_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"keys",
+"beach",
+"water"
+],
+"q": 1,
+"group": "place-leonida-keys",
+"desc": "Places/Leonida Keys/Leonida_Keys_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Leonida Keys/Leonida_Keys_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"keys",
+"beach",
+"water"
+],
+"q": 1,
+"group": "place-leonida-keys",
+"desc": "Places/Leonida Keys/Leonida_Keys_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Leonida Keys/Leonida_Keys_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"keys",
+"beach",
+"water"
+],
+"q": 1,
+"group": "place-leonida-keys",
+"desc": "Places/Leonida Keys/Leonida_Keys_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Leonida Keys/Leonida_Keys_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"keys",
+"beach",
+"water"
+],
+"q": 1,
+"group": "place-leonida-keys",
+"desc": "Places/Leonida Keys/Leonida_Keys_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Leonida Keys/Leonida_Keys_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"keys",
+"beach",
+"water"
+],
+"q": 1,
+"group": "place-leonida-keys",
+"desc": "Places/Leonida Keys/Leonida_Keys_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Leonida Keys/Leonida_Keys_06.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"keys",
+"beach",
+"water"
+],
+"q": 1,
+"group": "place-leonida-keys",
+"desc": "Places/Leonida Keys/Leonida_Keys_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Leonida Keys/Leonida_Keys_07.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"keys",
+"beach",
+"water"
+],
+"q": 1,
+"group": "place-leonida-keys",
+"desc": "Places/Leonida Keys/Leonida_Keys_07.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"nature",
+"mountain",
+"forest"
+],
+"q": 1,
+"group": "place-mount-kalaga-national-park",
+"desc": "Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"nature",
+"mountain",
+"forest"
+],
+"q": 1,
+"group": "place-mount-kalaga-national-park",
+"desc": "Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"nature",
+"mountain",
+"forest"
+],
+"q": 1,
+"group": "place-mount-kalaga-national-park",
+"desc": "Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"nature",
+"mountain",
+"forest"
+],
+"q": 1,
+"group": "place-mount-kalaga-national-park",
+"desc": "Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_05.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"nature",
+"mountain",
+"forest"
+],
+"q": 1,
+"group": "place-mount-kalaga-national-park",
+"desc": "Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_06.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"nature",
+"mountain",
+"forest"
+],
+"q": 1,
+"group": "place-mount-kalaga-national-park",
+"desc": "Places/Mount Kalaga National Park/Mount_Kalaga_National_Park_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Port Gellhorn/Port_Gellhorn_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"town",
+"coast"
+],
+"q": 1,
+"group": "place-port-gellhorn",
+"desc": "Places/Port Gellhorn/Port_Gellhorn_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Port Gellhorn/Port_Gellhorn_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"town",
+"coast"
+],
+"q": 1,
+"group": "place-port-gellhorn",
+"desc": "Places/Port Gellhorn/Port_Gellhorn_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Port Gellhorn/Port_Gellhorn_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"town",
+"coast"
+],
+"q": 1,
+"group": "place-port-gellhorn",
+"desc": "Places/Port Gellhorn/Port_Gellhorn_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Port Gellhorn/Port_Gellhorn_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"town",
+"coast"
+],
+"q": 1,
+"group": "place-port-gellhorn",
+"desc": "Places/Port Gellhorn/Port_Gellhorn_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Port Gellhorn/Port_Gellhorn_05.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"town",
+"coast"
+],
+"q": 1,
+"group": "place-port-gellhorn",
+"desc": "Places/Port Gellhorn/Port_Gellhorn_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Port Gellhorn/Port_Gellhorn_06.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"town",
+"coast"
+],
+"q": 1,
+"group": "place-port-gellhorn",
+"desc": "Places/Port Gellhorn/Port_Gellhorn_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Port Gellhorn/Port_Gellhorn_07.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"town",
+"coast"
+],
+"q": 1,
+"group": "place-port-gellhorn",
+"desc": "Places/Port Gellhorn/Port_Gellhorn_07.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_06.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_07.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_07.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_08.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_08.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_09.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_09.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_10.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_10.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_11.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_11.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_12.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_12.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_13.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_13.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_14.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_14.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_15.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_15.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_16.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_16.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_17.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_17.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_18.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_18.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_19.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_19.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_20.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_20.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_21.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_21.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_22.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_22.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_23.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_23.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_24.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_24.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_25.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_25.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_26.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_26.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Screenshots.zip#Places/Vice City/Vice_City_27.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"places",
+"vicecity",
+"city"
+],
+"q": 1,
+"group": "place-vice-city",
+"desc": "Places/Vice City/Vice_City_27.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_ELECTRIC_FANG_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_ELECTRIC_FANG_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_ELECTRIC_FANG_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_ELECTRIC_FANG_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_ELECTRIC_FANG_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_ELECTRIC_FANG_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_ELECTRIC_FANG_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_ELECTRIC_FANG_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_GOODTIME_GEAR_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_GOODTIME_GEAR_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_GROTTI_CHEETAH_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_GROTTI_CHEETAH_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_GROTTI_CHEETAH_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_GROTTI_CHEETAH_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_GROTTI_CHEETAH_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_GROTTI_CHEETAH_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_GROTTI_CHEETAH_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_GROTTI_CHEETAH_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_HAWK_AND_LITTLE_MORGAN_REVOLVERS_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"weapon"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_HAWK_AND_LITTLE_MORGAN_REVOLVERS_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_HAWK_AND_LITTLE_MORGAN_REVOLVERS_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"weapon"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_HAWK_AND_LITTLE_MORGAN_REVOLVERS_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_ONE_EYED_WILLIE_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_ONE_EYED_WILLIE_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_ONE_EYED_WILLIE_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_ONE_EYED_WILLIE_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_ONE_EYED_WILLIE_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_ONE_EYED_WILLIE_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_PTT_STORE_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_PTT_STORE_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_RIDEOUT_CUSTOMS_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_RIDEOUT_CUSTOMS_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_RIDEOUT_CUSTOMS_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_RIDEOUT_CUSTOMS_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_RIDEOUT_CUSTOMS_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_RIDEOUT_CUSTOMS_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SAFEHOUSE_VEHICLES_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SAFEHOUSE_VEHICLES_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SAFEHOUSE_VEHICLES_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SAFEHOUSE_VEHICLES_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SAFEHOUSE_VEHICLES_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SAFEHOUSE_VEHICLES_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SARAS_SALON_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SARAS_SALON_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SARAS_SALON_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SARAS_SALON_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SARAS_SALON_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SARAS_SALON_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SQUALO_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"boat",
+"water"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SQUALO_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SQUALO_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"boat",
+"water"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SQUALO_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SQUALO_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"boat",
+"water"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SQUALO_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_SQUALO_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"boat",
+"water"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_SQUALO_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_STOCK_305_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_STOCK_305_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_STOCK_305_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_STOCK_305_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_STOCK_305_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_STOCK_305_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_STOCK_305_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_STOCK_305_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VAPID_BUGGY_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VAPID_BUGGY_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VAPID_BUGGY_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VAPID_BUGGY_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VAPID_BUGGY_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VAPID_BUGGY_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VAPID_BUGGY_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VAPID_BUGGY_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VAPID_GANADO_RETRO_BUILD_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VAPID_GANADO_RETRO_BUILD_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VICE_CITY_STYLE_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VICE_CITY_STYLE_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VICE_CITY_STYLE_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VICE_CITY_STYLE_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VICE_CITY_STYLE_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VICE_CITY_STYLE_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VICE_CITY_STYLE_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VICE_CITY_STYLE_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_VICE_CITY_STYLE_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"outfits"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_VICE_CITY_STYLE_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_WEAPON_VARIANTS_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"weapon"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_WEAPON_VARIANTS_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Ultimate_Edition_Benefits.zip#ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_06.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "ULTIMATE_EDITION_WYMAN_CAR_COLLECTION_06.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_01.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_02.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_03.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_04.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_05.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_EXCLUSIVE_LOOKS_05.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_VAPID_STANIER_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_VAPID_STANIER_01.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_VAPID_STANIER_02.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_VAPID_STANIER_02.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_VAPID_STANIER_03.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_VAPID_STANIER_03.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_PACK_VAPID_STANIER_04.jpg",
+"x0": 0.3,
+"x1": 0.6,
+"tags": [
+"editions",
+"bonus",
+"car"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_PACK_VAPID_STANIER_04.jpg"
+},
+{
+"kind": "still",
+"src": "{V}/screenshots/GTAVI_Vintage_Vice_City_Pack.zip#VINTAGE_VICE_CITY_WEAPON_PATTERN_01.jpg",
+"x0": 0.65,
+"x1": 0.35,
+"tags": [
+"editions",
+"bonus",
+"weapon"
+],
+"q": 1,
+"group": "editions",
+"desc": "VINTAGE_VICE_CITY_WEAPON_PATTERN_01.jpg"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 7.2,
+"d": 6.5,
+"x": 0.5,
+"tags": [
+"night",
+"jason",
+"lucia",
+"walk",
+"street"
+],
+"q": 1,
+"group": "EL-projects",
+"desc": "Jason et Lucia marchent de nuit vers un immeuble"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 365.2,
+"d": 3.6,
+"x": 0.55,
+"tags": [
+"jason",
+"car",
+"day",
+"street",
+"mural"
+],
+"q": 2,
+"group": "EL-parking",
+"desc": "Jason près d'une voiture rouge, parking avec fresque"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 369.45,
+"d": 1.3,
+"x": 0.5,
+"tags": [
+"car",
+"road",
+"day"
+],
+"q": 2,
+"group": "EL-road",
+"desc": "Voiture rouge sur la route"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 380.1,
+"d": 2.38,
+"x": 0.55,
+"tags": [
+"city",
+"street",
+"day",
+"vicecity"
+],
+"q": 2,
+"group": "EL-street",
+"desc": "Rue de Vice City, camions, passants"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 387.0,
+"d": 2.0,
+"x": 0.45,
+"tags": [
+"couple",
+"jason",
+"lucia",
+"interior",
+"apartment"
+],
+"q": 1,
+"group": "EL-apart",
+"desc": "Jason et Lucia dans l'appartement rose"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 395.2,
+"d": 6.5,
+"x": 0.45,
+"tags": [
+"lucia",
+"interior",
+"apartment",
+"phone"
+],
+"q": 1,
+"group": "EL-apart",
+"desc": "Lucia allongée sur le lit, téléphone"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 431.0,
+"d": 12.5,
+"x": 0.5,
+"tags": [
+"jason",
+"interior",
+"apartment"
+],
+"q": 1,
+"group": "EL-apart",
+"desc": "Jason traverse l'appartement et la cuisine"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 445.2,
+"d": 2.5,
+"x": 0.5,
+"tags": [
+"tv",
+"funny",
+"ingame"
+],
+"q": 1,
+"group": "EL-tv",
+"desc": "Dessin animé sur la télé du jeu"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 454.2,
+"d": 5.5,
+"x": 0.5,
+"tags": [
+"tv",
+"nature",
+"ingame"
+],
+"q": 1,
+"group": "EL-tv",
+"desc": "Documentaire nature à la télé du jeu"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 465.1,
+"d": 2.32,
+"x": 0.5,
+"tags": [
+"nature",
+"wildlife",
+"river",
+"ingame"
+],
+"q": 3,
+"group": "EL-tv",
+"desc": "Animaux au bord d'une rivière (télé du jeu, plein écran)"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 468.1,
+"d": 2.45,
+"x": 0.5,
+"tags": [
+"wildlife",
+"funny",
+"ingame"
+],
+"q": 2,
+"group": "EL-tv",
+"desc": "Gros plan de cerfs-lapins (télé du jeu)"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 471.2,
+"d": 5.6,
+"x": 0.5,
+"tags": [
+"ad",
+"funny",
+"food",
+"ingame"
+],
+"q": 2,
+"group": "EL-tv",
+"desc": "Pub parodique de burger géant (télé du jeu)"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 479.1,
+"d": 2.28,
+"x": 0.55,
+"tags": [
+"city",
+"day",
+"vicecity",
+"buildings"
+],
+"q": 2,
+"group": "EL-street",
+"desc": "Immeubles de Vice City en plein jour"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 484.2,
+"d": 5.6,
+"x": 0.5,
+"tags": [
+"jason",
+"day",
+"city"
+],
+"q": 2,
+"group": "EL-parking",
+"desc": "Jason sort du parking au soleil"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 490.1,
+"d": 9.6,
+"x": 0.45,
+"tags": [
+"jason",
+"car",
+"convertible",
+"day"
+],
+"q": 2,
+"group": "EL-parking",
+"desc": "Jason monte dans la décapotable rouge"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 500.1,
+"d": 5.6,
+"x": 0.4,
+"tags": [
+"car",
+"convertible",
+"day"
+],
+"q": 2,
+"group": "EL-parking",
+"desc": "La décapotable rouge démarre"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 506.2,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"city",
+"day",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-drive",
+"desc": "Conduite en décapotable dans Vice City"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 510.4,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"city",
+"day",
+"vicecity",
+"gameplay",
+"traffic"
+],
+"q": 3,
+"group": "EL-drive",
+"desc": "Conduite, circulation"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 514.6,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"city",
+"day",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-drive",
+"desc": "Conduite, palmiers et gratte-ciel"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 519.2,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"city",
+"day",
+"vicecity",
+"gameplay",
+"downtown"
+],
+"q": 3,
+"group": "EL-drive",
+"desc": "Conduite vers le centre-ville"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 523.4,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"city",
+"day",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-drive",
+"desc": "Conduite, travaux"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 527.6,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"city",
+"day",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-drive",
+"desc": "Conduite en ville"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 531.8,
+"d": 3.8,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"vicecity",
+"gameplay",
+"road"
+],
+"q": 3,
+"group": "EL-drive",
+"desc": "Conduite sur une grande avenue"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 535.8,
+"d": 2.9,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"bridge",
+"water",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-drive",
+"desc": "Décapotable sur une chaussée au-dessus de l'eau"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 539.1,
+"d": 2.8,
+"x": 0.45,
+"tags": [
+"city",
+"bridge",
+"day",
+"stunt"
+],
+"q": 2,
+"group": "EL-montage",
+"desc": "Pont et tours vus d'en bas"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 542.1,
+"d": 1.8,
+"x": 0.45,
+"tags": [
+"night",
+"city",
+"car",
+"neon"
+],
+"q": 2,
+"group": "EL-montage",
+"desc": "Rue de nuit, voiture rouge"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 544.1,
+"d": 2.42,
+"x": 0.3,
+"tags": [
+"character",
+"street",
+"day",
+"funny"
+],
+"q": 2,
+"group": "EL-montage",
+"desc": "Passant qui se filme devant une boutique"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 554.45,
+"d": 6.1,
+"x": 0.45,
+"tags": [
+"character",
+"motel",
+"day"
+],
+"q": 2,
+"group": "EL-motel",
+"desc": "Homme en débardeur devant un motel"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 565.1,
+"d": 3.58,
+"x": 0.5,
+"tags": [
+"wrestling",
+"crowd",
+"day",
+"funny",
+"backyard"
+],
+"q": 2,
+"group": "EL-montage",
+"desc": "Catch dans un jardin, public"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 569.1,
+"d": 1.58,
+"x": 0.5,
+"tags": [
+"heist",
+"action",
+"violent"
+],
+"q": 1,
+"group": "EL-montage",
+"desc": "Braquage d'un fourgon blindé"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 571.1,
+"d": 1.58,
+"x": 0.5,
+"tags": [
+"city",
+"day",
+"rooftop",
+"aerial"
+],
+"q": 2,
+"group": "EL-montage",
+"desc": "Toits de la ville"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 573.1,
+"d": 1.58,
+"x": 0.5,
+"tags": [
+"rooftop",
+"party",
+"crowd",
+"day"
+],
+"q": 2,
+"group": "EL-montage",
+"desc": "Fête sur un toit"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 588.3,
+"d": 5.6,
+"x": 0.45,
+"tags": [
+"jason",
+"rooftop",
+"city",
+"day"
+],
+"q": 2,
+"group": "EL-rooftop",
+"desc": "Jason arrive sur un rooftop ensoleillé"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 594.1,
+"d": 5.8,
+"x": 0.45,
+"tags": [
+"jason",
+"rooftop",
+"city",
+"day",
+"party",
+"crowd",
+"skyline"
+],
+"q": 3,
+"group": "EL-rooftop",
+"desc": "Jason sur le rooftop, skyline de Vice City"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 600.1,
+"d": 5.8,
+"x": 0.4,
+"tags": [
+"jason",
+"rooftop",
+"party",
+"crowd",
+"day"
+],
+"q": 2,
+"group": "EL-rooftop",
+"desc": "Bar en terrasse, foule"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 606.1,
+"d": 13.5,
+"x": 0.45,
+"tags": [
+"rooftop",
+"party",
+"crowd",
+"day"
+],
+"q": 2,
+"group": "EL-rooftop",
+"desc": "Terrasse bondée, ballons"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 639.45,
+"d": 2.3,
+"x": 0.45,
+"tags": [
+"rooftop",
+"day",
+"party",
+"city"
+],
+"q": 2,
+"group": "EL-rooftop",
+"desc": "Bar en terrasse sur un toit"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 645.1,
+"d": 5.35,
+"x": 0.5,
+"tags": [
+"rooftop",
+"crowd",
+"day"
+],
+"q": 2,
+"group": "EL-rooftop",
+"desc": "Clients attablés sur le rooftop"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 672.2,
+"d": 3.6,
+"x": 0.4,
+"tags": [
+"jason",
+"rooftop",
+"skyline",
+"city",
+"day"
+],
+"q": 3,
+"group": "EL-rooftop2",
+"desc": "Jason serre la main d'un homme, skyline derrière"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 676.1,
+"d": 9.7,
+"x": 0.4,
+"tags": [
+"jason",
+"rooftop",
+"skyline",
+"city",
+"day"
+],
+"q": 3,
+"group": "EL-rooftop2",
+"desc": "Jason discute face à la skyline de Vice City"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 687.2,
+"d": 7.02,
+"x": 0.5,
+"tags": [
+"heist",
+"robbery",
+"gun",
+"violent"
+],
+"q": 1,
+"group": "EL-robbery",
+"desc": "Braquage d'une supérette, armes"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 706.1,
+"d": 5.8,
+"x": 0.5,
+"tags": [
+"heist",
+"robbery",
+"store",
+"violent"
+],
+"q": 1,
+"group": "EL-robbery",
+"desc": "Supérette braquée"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 735.1,
+"d": 9.42,
+"x": 0.35,
+"tags": [
+"jason",
+"skyline",
+"city",
+"day",
+"overlook"
+],
+"q": 2,
+"group": "EL-overlook",
+"desc": "Jason et un homme face à la skyline"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 745.1,
+"d": 4.8,
+"x": 0.55,
+"tags": [
+"city",
+"skyline",
+"aerial",
+"day",
+"vicecity",
+"helicopter"
+],
+"q": 3,
+"group": "EL-overlook",
+"desc": "Panorama de Vice City, hélicoptère"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 750.2,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"palms",
+"water",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Berline sur la route du front de mer"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 754.4,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"palms",
+"sun",
+"vicecity",
+"gameplay",
+"highway"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Autoroute sous les palmiers, contre-jour"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 758.6,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"palms",
+"vicecity",
+"gameplay",
+"highway",
+"traffic"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Autoroute, circulation"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 762.8,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"palms",
+"sun",
+"vicecity",
+"gameplay",
+"highway"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Autoroute, soleil entre les palmiers"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 767.0,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"palms",
+"vicecity",
+"gameplay",
+"highway"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Autoroute bordée de palmiers"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 771.2,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"skyline",
+"vicecity",
+"gameplay",
+"highway"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Arrivée vers les tours"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 775.4,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"skyline",
+"downtown",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Échangeur et gratte-ciel"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 779.6,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"skyline",
+"downtown",
+"vicecity",
+"gameplay",
+"sun"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Gratte-ciel en contre-jour"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 783.8,
+"d": 4.0,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"skyline",
+"downtown",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-drive2",
+"desc": "Tours et hélicoptère"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 787.0,
+"d": 2.8,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"downtown",
+"vicecity",
+"gameplay"
+],
+"q": 2,
+"group": "EL-drive2",
+"desc": "Centre-ville en voiture"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 794.2,
+"d": 5.6,
+"x": 0.4,
+"tags": [
+"jason",
+"car",
+"interior"
+],
+"q": 1,
+"group": "EL-incar",
+"desc": "Jason au volant, passagère"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 840.1,
+"d": 32.0,
+"x": 0.5,
+"tags": [
+"shootout",
+"police",
+"gun",
+"violent"
+],
+"q": 1,
+"group": "EL-shootout",
+"desc": "Fusillade avec la police"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 917.2,
+"d": 5.6,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"city",
+"gameplay"
+],
+"q": 2,
+"group": "EL-getaway",
+"desc": "Berline qui sort d'un parking, rue ensoleillée"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 923.2,
+"d": 5.6,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"city",
+"vicecity",
+"gameplay"
+],
+"q": 2,
+"group": "EL-getaway",
+"desc": "Conduite dans les rues"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 929.2,
+"d": 5.6,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"city",
+"vicecity",
+"gameplay"
+],
+"q": 2,
+"group": "EL-getaway",
+"desc": "Conduite entre les immeubles"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 935.2,
+"d": 5.6,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"city",
+"vicecity",
+"gameplay",
+"palms"
+],
+"q": 2,
+"group": "EL-getaway",
+"desc": "Conduite, palmiers"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 943.42,
+"d": 5.23,
+"x": 0.5,
+"tags": [
+"police",
+"chase",
+"car",
+"day",
+"city"
+],
+"q": 2,
+"group": "EL-getaway",
+"desc": "Voitures de police à la poursuite"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 979.2,
+"d": 5.6,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"neighborhood",
+"vicecity",
+"gameplay",
+"palms"
+],
+"q": 2,
+"group": "EL-van",
+"desc": "Van dans un quartier résidentiel"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 985.2,
+"d": 5.6,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"day",
+"skyline",
+"vicecity",
+"gameplay"
+],
+"q": 3,
+"group": "EL-van",
+"desc": "Van vers les tours et une arche"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 992.2,
+"d": 6.6,
+"x": 0.5,
+"tags": [
+"aerial",
+"city",
+"skyline",
+"day",
+"water",
+"vicecity"
+],
+"q": 3,
+"group": "EL-aerial",
+"desc": "Vice City vue du ciel, chaussée et baie"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1013.35,
+"d": 3.4,
+"x": 0.45,
+"tags": [
+"jason",
+"lucia",
+"couple",
+"day",
+"street"
+],
+"q": 3,
+"group": "EL-van2",
+"desc": "Jason et Lucia côte à côte dans la rue"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1020.1,
+"d": 2.8,
+"x": 0.45,
+"tags": [
+"jason",
+"lucia",
+"couple",
+"day",
+"street"
+],
+"q": 2,
+"group": "EL-van2",
+"desc": "Jason et Lucia le long d'un mur bleu"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1026.2,
+"d": 3.7,
+"x": 0.55,
+"tags": [
+"street",
+"day",
+"mural",
+"vicecity",
+"city"
+],
+"q": 3,
+"group": "EL-montage2",
+"desc": "Rue avec fresque colorée"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1030.1,
+"d": 2.8,
+"x": 0.5,
+"tags": [
+"swamp",
+"nature",
+"boat",
+"airboat",
+"day",
+"water"
+],
+"q": 3,
+"group": "EL-montage2",
+"desc": "Hydroglisseur dans le marais"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1033.1,
+"d": 2.8,
+"x": 0.45,
+"tags": [
+"character",
+"basketball",
+"day",
+"funny"
+],
+"q": 2,
+"group": "EL-montage2",
+"desc": "Basket sous une maison sur pilotis"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1036.1,
+"d": 2.45,
+"x": 0.5,
+"tags": [
+"underwater",
+"water",
+"diving",
+"nature"
+],
+"q": 3,
+"group": "EL-montage2",
+"desc": "Plongée dans une grotte sous-marine"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1039.1,
+"d": 2.8,
+"x": 0.5,
+"tags": [
+"gym",
+"character"
+],
+"q": 2,
+"group": "EL-montage2",
+"desc": "Développé couché à la salle"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1042.35,
+"d": 2.4,
+"x": 0.5,
+"tags": [
+"water",
+"beach",
+"keys",
+"day",
+"swim"
+],
+"q": 3,
+"group": "EL-montage2",
+"desc": "Plongeon depuis un ponton dans la mer"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1045.1,
+"d": 1.8,
+"x": 0.5,
+"tags": [
+"water",
+"jetski",
+"sunset",
+"boat"
+],
+"q": 3,
+"group": "EL-montage2",
+"desc": "Jet-ski au coucher du soleil"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1049.1,
+"d": 1.8,
+"x": 0.5,
+"tags": [
+"water",
+"kayak",
+"city",
+"skyline",
+"day"
+],
+"q": 3,
+"group": "EL-montage2",
+"desc": "Kayak sur un canal, skyline"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1059.1,
+"d": 2.55,
+"x": 0.5,
+"tags": [
+"nightlife",
+"club",
+"night",
+"neon"
+],
+"q": 2,
+"group": "EL-montage2",
+"desc": "Piste de danse d'un club"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1062.1,
+"d": 4.8,
+"x": 0.5,
+"tags": [
+"car",
+"race",
+"racing",
+"day",
+"palms",
+"gameplay"
+],
+"q": 3,
+"group": "EL-montage2",
+"desc": "Course de voitures sur circuit"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1073.1,
+"d": 3.8,
+"x": 0.5,
+"tags": [
+"street",
+"day",
+"character"
+],
+"q": 2,
+"group": "EL-jewel",
+"desc": "Passante devant des boutiques"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1084.1,
+"d": 6.8,
+"x": 0.5,
+"tags": [
+"bike",
+"motorbike",
+"street",
+"day"
+],
+"q": 2,
+"group": "EL-jewel",
+"desc": "Fuite en moto dans une rue ensoleillée"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1095.1,
+"d": 8.8,
+"x": 0.5,
+"tags": [
+"street",
+"day",
+"funny",
+"phone",
+"character"
+],
+"q": 2,
+"group": "EL-street2",
+"desc": "Passants qui se filment au téléphone"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1108.62,
+"d": 2.13,
+"x": 0.5,
+"tags": [
+"beach",
+"crowd",
+"day",
+"vicecity",
+"umbrellas"
+],
+"q": 3,
+"group": "EL-beach",
+"desc": "Plage bondée, parasols jaunes"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1115.1,
+"d": 3.8,
+"x": 0.5,
+"tags": [
+"bike",
+"dirtbike",
+"offroad",
+"nature",
+"day",
+"hills"
+],
+"q": 3,
+"group": "EL-montage3",
+"desc": "Moto-cross sur un chemin de terre"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1119.35,
+"d": 2.9,
+"x": 0.5,
+"tags": [
+"car",
+"driving",
+"night",
+"city",
+"neon"
+],
+"q": 2,
+"group": "EL-montage3",
+"desc": "Conduite de nuit en ville"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1128.1,
+"d": 4.8,
+"x": 0.5,
+"tags": [
+"skydive",
+"aerial",
+"city",
+"skyline",
+"day",
+"vicecity",
+"stunt"
+],
+"q": 3,
+"group": "EL-skydive",
+"desc": "Saut en chute libre au-dessus de Vice City"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1133.1,
+"d": 5.55,
+"x": 0.5,
+"tags": [
+"parachute",
+"aerial",
+"city",
+"skyline",
+"day",
+"vicecity"
+],
+"q": 3,
+"group": "EL-skydive",
+"desc": "Parachute au-dessus de la ville"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1139.1,
+"d": 1.8,
+"x": 0.5,
+"tags": [
+"aerial",
+"city",
+"day",
+"skydive"
+],
+"q": 2,
+"group": "EL-skydive",
+"desc": "Chute libre, la ville vue d'en haut"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1144.1,
+"d": 2.8,
+"x": 0.5,
+"tags": [
+"funny",
+"interior",
+"character"
+],
+"q": 2,
+"group": "EL-montage3",
+"desc": "Deux potes qui rigolent sur un canapé"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1147.48,
+"d": 3.54,
+"x": 0.45,
+"tags": [
+"airport",
+"interior",
+"day",
+"luxury"
+],
+"q": 2,
+"group": "EL-airport",
+"desc": "Salon d'aéroport privé"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1176.1,
+"d": 3.8,
+"x": 0.5,
+"tags": [
+"jet",
+"plane",
+"night",
+"luxury",
+"airport"
+],
+"q": 2,
+"group": "EL-airport",
+"desc": "Jet privé de nuit sur le tarmac"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1207.1,
+"d": 5.8,
+"x": 0.5,
+"tags": [
+"car",
+"night",
+"skyline",
+"city"
+],
+"q": 2,
+"group": "EL-night1",
+"desc": "4x4 vers la skyline illuminée"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1214.1,
+"d": 1.8,
+"x": 0.5,
+"tags": [
+"city",
+"night",
+"neon",
+"skyscraper",
+"vicecity"
+],
+"q": 3,
+"group": "EL-night1",
+"desc": "Gratte-ciel au néon rose"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1218.1,
+"d": 2.8,
+"x": 0.5,
+"tags": [
+"nightlife",
+"party",
+"pool",
+"night",
+"neon"
+],
+"q": 3,
+"group": "EL-night2",
+"desc": "Fête au bord d'une piscine néon"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1221.1,
+"d": 4.8,
+"x": 0.45,
+"tags": [
+"car",
+"race",
+"racing",
+"sunset",
+"night",
+"neon",
+"gameplay"
+],
+"q": 3,
+"group": "EL-night2",
+"desc": "Course de rue au crépuscule, néons sous la voiture"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1226.1,
+"d": 2.8,
+"x": 0.5,
+"tags": [
+"nightlife",
+"club",
+"party",
+"neon",
+"night"
+],
+"q": 3,
+"group": "EL-night2",
+"desc": "Foule qui danse dans un club"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1229.1,
+"d": 1.8,
+"x": 0.5,
+"tags": [
+"nightlife",
+"club",
+"dj",
+"neon"
+],
+"q": 2,
+"group": "EL-night2",
+"desc": "DJ aux platines"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1233.1,
+"d": 1.8,
+"x": 0.5,
+"tags": [
+"night",
+"aerial",
+"neon",
+"city"
+],
+"q": 2,
+"group": "EL-night2",
+"desc": "La ville de nuit vue d'en haut, néon arc-en-ciel"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1243.1,
+"d": 9.8,
+"x": 0.5,
+"tags": [
+"nightlife",
+"night",
+"neon",
+"club"
+],
+"q": 2,
+"group": "EL-club",
+"desc": "Entrée d'un club, néons"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1253.1,
+"d": 7.35,
+"x": 0.5,
+"tags": [
+"nightlife",
+"neon",
+"club"
+],
+"q": 2,
+"group": "EL-club",
+"desc": "Couloir d'entrée du club"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1274.1,
+"d": 6.48,
+"x": 0.5,
+"tags": [
+"party",
+"nightlife",
+"interior"
+],
+"q": 2,
+"group": "EL-club",
+"desc": "Fête avec ballons, invités"
+},
+{
+"kind": "video",
+"src": "{V}/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+"t": 1374.1,
+"d": 3.8,
+"x": 0.5,
+"tags": [
+"nightlife",
+"party",
+"club",
+"neon"
+],
+"q": 2,
+"group": "EL-club2",
+"desc": "Soirée sous lumière bleue"
+}
+]
+}

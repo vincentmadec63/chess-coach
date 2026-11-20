@@ -12,6 +12,8 @@ Spec :
   "credit": "Footage: Rockstar Games",          (optionnel, affiché si "broll")
   "seed": 12,                                   (optionnel : musique)
   "shot_len": 2.4,                              (optionnel : durée cible d'un plan, en s)
+  "broll_auto": {"tags": ["city", "night"]},   (recommandé : le moteur choisit les plans dans broll_index.json
+                                                 selon ces mots-clés ; plans violents et plans à texte exclus)
   "broll": [                                    (optionnel : réserve de plans, utilisée dans l'ordre)
     {"src": "https://.../GTAVI_Trailer_2.mp4", "t": 41.5, "x": 0.5},   vidéo : début t, cadrage horizontal x (0..1)
     {"src": "https://.../Vice_City_11.jpg", "x0": 0.2, "x1": 0.45},    capture : panoramique de x0 à x1
@@ -43,6 +45,7 @@ CX = (X0 + X1) // 2
 HORIZON = 1390
 CAP_Y = 1040
 CARD_TOP, CARD_BOTTOM = 330, 930
+CARD_SCALE = 1.0
 VOICE_DIR = os.environ.get("GTA6_VOICE_DIR", os.path.expanduser("~/voices"))
 VOICE_NAME = "en-us-libritts-high"
 SPEAKER, LENGTH = 888, 0.9
@@ -156,6 +159,12 @@ def build_card(c, dur):
         return []
     gap = 14
     total = sum(im.height for im, _ in layers) + gap * (len(layers) - 1)
+    sc = min(CARD_SCALE, (CARD_BOTTOM - CARD_TOP) / max(1, total))
+    if sc < 0.999:
+        layers = [(im.resize((max(1, int(im.width * sc)), max(1, int(im.height * sc))), Image.LANCZOS), st)
+                  for im, st in layers]
+        gap = int(gap * sc)
+        total = sum(im.height for im, _ in layers) + gap * (len(layers) - 1)
     y = CARD_TOP + max(0, (CARD_BOTTOM - CARD_TOP - total) // 2)
     out = []
     for im, st in layers:
@@ -487,26 +496,75 @@ def build_audio(total, segs, voice_parts, seed, path):
 CACHE = os.environ.get("GTA6_MEDIA_CACHE", os.path.expanduser("~/.cache/gta6-media"))
 IMG_EXT = (".jpg", ".jpeg", ".png", ".webp")
 
-def fetch_src(src):
-    """Chemin local du média (téléchargé une fois si URL). Lève une exception si indisponible."""
-    if not src.startswith("http"):
-        if not os.path.exists(src):
-            raise FileNotFoundError(src)
+CA_FILE = os.path.expanduser("~/.ccr/ca-bundle.crt")
+_ok_urls = {}
+
+_base = None
+def expand_src(src):
+    """Remplace les {CLE} d'une source par la base du catalogue (ex. {V} = médias officiels Rockstar)."""
+    global _base
+    if "{" not in src:
         return src
+    if _base is None:
+        try:
+            _base = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "broll_index.json"))).get("base", {})
+        except Exception:
+            _base = {}
+    for k, v in _base.items():
+        src = src.replace("{" + k + "}", v)
+    return src
+
+def is_image(src):
+    return src.split("#")[-1].lower().endswith(IMG_EXT)
+
+def is_remote_video(src):
+    return src.startswith("http") and "#" not in src and not is_image(src)
+
+def fetch_src(src):
+    """Chemin local d'un média. URL : téléchargée une fois dans le cache. "zip_url#chemin/dans/le/zip.jpg" :
+    le zip est téléchargé et extrait une fois. Lève une exception si indisponible."""
+    url, _, member = src.partition("#")
+    if not url.startswith("http"):
+        path = os.path.join(url, member) if member else url
+        if not os.path.exists(path):
+            raise FileNotFoundError(path)
+        return path
     os.makedirs(CACHE, exist_ok=True)
-    name = os.path.join(CACHE, re.sub(r"[^A-Za-z0-9._-]", "_", src.split("://", 1)[1])[-150:])
+    name = os.path.join(CACHE, re.sub(r"[^A-Za-z0-9._-]", "_", url.split("://", 1)[1])[-150:])
     if not os.path.exists(name):
         tmp = name + ".part"
-        subprocess.run(["curl", "-sS", "-L", "--fail", "--retry", "3", "-o", tmp, src], check=True)
+        subprocess.run(["curl", "-sS", "-L", "--fail", "--retry", "3", "-o", tmp, url], check=True)
         os.rename(tmp, name)
-    return name
+    if not member:
+        return name
+    xdir = name + ".d"
+    if not os.path.isdir(xdir):
+        import zipfile
+        zipfile.ZipFile(name).extractall(xdir + ".part")
+        os.rename(xdir + ".part", xdir)
+    path = os.path.join(xdir, member)
+    if not os.path.exists(path):
+        raise FileNotFoundError(member)
+    return path
+
+def check_src(src):
+    """Vérifie qu'un média est utilisable ; une vidéo distante n'est pas téléchargée (lecture à la demande)."""
+    if is_remote_video(src):
+        if src not in _ok_urls:
+            r = subprocess.run(["curl", "-sS", "-I", "-L", "--fail", "--max-time", "20", "-o", "/dev/null", src])
+            _ok_urls[src] = r.returncode == 0
+        if not _ok_urls[src]:
+            raise IOError("vidéo distante inaccessible")
+        return src
+    return fetch_src(src)
 
 def shot_cmd(shot, n):
-    """Commande ffmpeg qui sort n images 1080x1920 rgb24 (sans son) pour ce plan."""
-    src = fetch_src(shot["src"])
+    """Commande ffmpeg (et environnement) qui sort n images 1080x1920 rgb24 (sans son) pour ce plan."""
+    env = dict(os.environ)
     dur = max(n, 1) / FPS
     fx = float(shot.get("x", 0.5))
-    if src.lower().endswith(IMG_EXT):
+    if is_image(shot["src"]):
+        src = fetch_src(shot["src"])
         x0 = float(shot.get("x0", max(0.0, fx - 0.12)))
         x1 = float(shot.get("x1", min(1.0, fx + 0.12)))
         if shot.get("rev"):
@@ -515,7 +573,19 @@ def shot_cmd(shot, n):
         pre = f"loop=-1:1:0,setpts=N/{FPS}/TB,"
         xexpr = f"(iw-ih*9/16)*({x0:.4f}+({x1 - x0:.4f})*t/{dur:.3f})"
     else:
-        inp = ["-ss", f"{float(shot.get('t', 0)):.3f}", "-i", src]
+        t = float(shot.get("t", 0))
+        if shot.get("d"):   # plan plus long que nécessaire : on prend le milieu (loin des coupes)
+            t += max(0.0, (float(shot["d"]) - dur) / 2)
+        if is_remote_video(shot["src"]):
+            src = shot["src"]
+            pxy = env.get("HTTPS_PROXY") or env.get("https_proxy")
+            if pxy:
+                env["http_proxy"] = pxy
+            net = ["-ca_file", CA_FILE, "-tls_verify", "1"] if os.path.exists(CA_FILE) else []
+            inp = net + ["-ss", f"{t:.3f}", "-i", src]
+        else:
+            src = fetch_src(shot["src"])
+            inp = ["-ss", f"{t:.3f}", "-i", src]
         pre = ""
         xexpr = f"(iw-ih*9/16)*{fx:.4f}"
     if shot.get("fit") == "inset":
@@ -524,46 +594,99 @@ def shot_cmd(shot, n):
               "[bg][fg]overlay=0:(H-h)/2-180")
     else:
         vf = pre + f"crop=w=ih*9/16:h=ih:x='{xexpr}':y=0,scale=1080:1920:flags=lanczos"
-    return ["ffmpeg", "-loglevel", "error", *inp, "-an", "-vf", vf + ",format=rgb24",
-            "-frames:v", str(n), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
+    cmd = ["ffmpeg", "-loglevel", "error", *inp, "-an", "-vf", vf + ",format=rgb24",
+           "-frames:v", str(n), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
+    return cmd, env
+
+def auto_broll(spec, total, segs):
+    """Choisit les plans dans le catalogue selon les mots-clés du sujet. Plans violents exclus par défaut,
+    et jamais dans les 7 premières secondes ; plans avec texte/logo toujours exclus."""
+    import random
+    cfg = spec.get("broll_auto") or {}
+    path = cfg.get("index") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "broll_index.json")
+    idx = json.load(open(path))
+    base = idx.get("base", {})
+    rng = random.Random(spec.get("seed", zlib.crc32(spec.get("out", "x").encode())))
+    want = [t.lower() for t in cfg.get("tags", [])]
+    allow_violent = bool(cfg.get("allow_violent"))
+    cands = []
+    for sh in idx["shots"]:
+        tags = set(sh.get("tags", []))
+        if "text" in tags or (("violent" in tags) and not allow_violent):
+            continue
+        score = 3 * len(tags & set(want)) + sh.get("q", 1) + rng.random() * 1.5
+        if sh.get("kind") == "still":
+            score -= cfg.get("still_penalty", 0.8)
+        src = sh["src"]
+        for k, v in base.items():
+            src = src.replace("{" + k + "}", v)
+        cands.append((score, dict(sh, src=src)))
+    cands.sort(key=lambda c: -c[0])
+    need = int(total / float(spec.get("shot_len", 2.4))) + 4
+    top = [c[1] for c in cands[: max(need * 2, need + 6)]]
+    # les meilleurs d'abord, en évitant deux plans du même lieu/vidéo d'affilée
+    rng.shuffle(top)
+    top.sort(key=lambda s: -(3 * len(set(s.get("tags", [])) & set(want)) + s.get("q", 1)))
+    out, last = [], None
+    while top and len(out) < need:
+        pick = next((s for s in top if s.get("group") != last), top[0])
+        top.remove(pick); out.append(pick); last = pick.get("group")
+    return out
 
 def plan_shots(segs, total, spec):
-    """[(plan, nb d'images)] couvrant toute la vidéo ; coupe aux changements de segment."""
+    """[(plan, nb d'images)] couvrant toute la vidéo ; coupe aux changements de segment.
+    Un plan vidéo avec durée "d" n'est jamais étiré au-delà : le segment prend alors un plan de plus."""
     pool = []
-    for sh in spec.get("broll", []):
+    raw_pool = [dict(sh, src=expand_src(sh["src"])) for sh in spec.get("broll", [])]
+    if spec.get("broll_auto"):
         try:
-            fetch_src(sh["src"]); pool.append(sh)
+            raw_pool += auto_broll(spec, total, segs)
+        except Exception as e:
+            print("catalogue indisponible :", e, file=sys.stderr)
+    for sh in raw_pool:
+        try:
+            check_src(sh["src"]); pool.append(sh)
         except Exception as e:
             print("plan ignoré :", sh.get("src"), e, file=sys.stderr)
     target = float(spec.get("shot_len", 2.4))
     nf = int(round(total * FPS))
     plan, pi = [], 0
+    def next_pool():
+        nonlocal pi
+        if not pool:
+            return None
+        sh = pool[pi % len(pool)]
+        lap = pi // len(pool)
+        pi += 1
+        return dict(sh, t=float(sh.get("t", 0)) + 1.5 * lap) if lap and not is_image(sh["src"]) else sh
     for k, s in enumerate(segs):
         f0 = int(round(s["start"] * FPS))
         f1 = nf if k == len(segs) - 1 else int(round(s["end"] * FPS))
-        n = f1 - f0
-        if n <= 0:
-            continue
+        r = f1 - f0
         own = []
         for sh in s.get("shots") or []:
+            sh = dict(sh, src=expand_src(sh["src"]))
             try:
-                fetch_src(sh["src"]); own.append(sh)
+                check_src(sh["src"]); own.append(sh)
             except Exception as e:
                 print("plan ignoré :", sh.get("src"), e, file=sys.stderr)
-        cnt = max(1, int(round(n / FPS / target)), len(own))
-        shots = []
-        for _ in range(cnt):
-            if own:
-                shots.append(own.pop(0))
-            elif pool:
-                sh = pool[pi % len(pool)]
-                lap = pi // len(pool)
-                shots.append(dict(sh, t=float(sh.get("t", 0)) + 3.0 * lap) if lap else sh)
-                pi += 1
-        if not shots:
+        guard = 0
+        while r > 0 and guard < 50:
+            guard += 1
+            slots = max(1, int(round(r / FPS / target)), len(own))
+            want = r if slots == 1 else r // slots
+            sh = own.pop(0) if own else next_pool()
+            if sh is None:
+                return None
+            if k == 0 and f1 - r < 7 * FPS and "violent" in sh.get("tags", []):
+                continue
+            cap = int(float(sh["d"]) * FPS) if (sh.get("d") and not is_image(sh["src"])) else want
+            take = min(want, cap)
+            if take < int(0.6 * FPS) and r > take:
+                continue
+            plan.append((sh, take)); r -= take
+        if r > 0:
             return None
-        b = [round(i * n / len(shots)) for i in range(len(shots) + 1)]
-        plan += [(sh, b[i + 1] - b[i]) for i, sh in enumerate(shots) if b[i + 1] > b[i]]
     return plan
 
 def broll_frames(plan):
@@ -571,7 +694,8 @@ def broll_frames(plan):
     size = W * H * 3
     last = Image.new("RGB", (W, H), (12, 6, 24))
     for shot, n in plan:
-        p = subprocess.Popen(shot_cmd(shot, n), stdout=subprocess.PIPE)
+        cmd, env = shot_cmd(shot, n)
+        p = subprocess.Popen(cmd, stdout=subprocess.PIPE, env=env)
         got = 0
         for _ in range(n):
             buf = p.stdout.read(size)
@@ -591,7 +715,8 @@ def broll_frame_at(plan, fi):
     for shot, n in plan:
         if fi < acc + n:
             k = fi - acc
-            out = subprocess.run(shot_cmd(shot, k + 1), capture_output=True).stdout
+            cmd, env = shot_cmd(shot, k + 1)
+            out = subprocess.run(cmd, capture_output=True, env=env).stdout
             size = W * H * 3
             if len(out) >= size:
                 return Image.frombytes("RGB", (W, H), out[(len(out) // size - 1) * size:][:size])
@@ -614,9 +739,11 @@ PANEL_X0, PANEL_X1 = X0 - 44, X1 + 44
 def panel_for(layers):
     if not layers:
         return None
-    y0 = min(y for _, _, y, _ in layers) - 36
-    y1 = max(y + im.height for im, _, y, _ in layers) + 36
-    box = (PANEL_X0, max(300, y0), PANEL_X1, min(H - 40, y1))
+    y0 = min(y for _, _, y, _ in layers) - 30
+    y1 = max(y + im.height for im, _, y, _ in layers) + 30
+    x0 = min(x for _, x, _, _ in layers) - 40
+    x1 = max(x + im.width for im, x, _, _ in layers) + 40
+    box = (max(40, min(PANEL_X0 + 60, x0)), max(300, y0), min(985, max(PANEL_X1 - 60, x1)), min(H - 40, y1))
     mask = Image.new("L", (box[2] - box[0], box[3] - box[1]), 0)
     ImageDraw.Draw(mask).rounded_rectangle([0, 0, mask.width - 1, mask.height - 1], radius=38, fill=255)
     return box, mask
@@ -649,16 +776,20 @@ def main():
     base_dir = os.path.dirname(os.path.abspath(spec_path))
     out = os.path.join(base_dir, spec.get("out", "short.mp4"))
     seed = spec.get("seed", zlib.crc32(os.path.basename(out).encode()))
+    global CAP_Y, CARD_TOP, CARD_BOTTOM, CARD_SCALE
     segs, total, voice_parts = time_segments(spec["segments"])
     for s, raw in zip(segs, spec["segments"]):
         s["shots"] = raw.get("shots")
+    plan = plan_shots(segs, total, spec) if (spec.get("broll") or spec.get("broll_auto") or any(s["shots"] for s in segs)) else None
+    footage = bool(plan)
+    if footage:   # images réelles : cartes compactes en bas, sous-titres au centre, visages (haut-milieu) dégagés
+        CARD_TOP, CARD_BOTTOM, CARD_SCALE, CAP_Y = 1110, 1470, 0.78, 935
+    for s in segs:
         s["layers"] = build_card(s["card"], s["end"] - s["start"])
         s["panel"] = panel_for(s["layers"])
         s["groups"] = caption_groups(s["words"], s["end"])
         for g in s["groups"]:
             g["imgs"] = [render_caption(g, i) for i in range(len(g["words"]))]
-    plan = plan_shots(segs, total, spec) if (spec.get("broll") or any(s["shots"] for s in segs)) else None
-    footage = bool(plan)
     if footage:
         shade = make_shade()
     else:
