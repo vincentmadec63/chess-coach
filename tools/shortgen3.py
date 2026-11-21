@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Shorts 1080x1920, version 3 : voix off anglaise, sous-titres mot à mot, musique originale et effets
-sonores générés par code. Fond : plans officiels Rockstar (vidéos ou captures 4K recadrées en 9:16, son
-du jeu coupé) quand la spec fournit "broll", sinon fond synthwave animé original (comme la v2).
+sonores générés par code. Fond : TOUJOURS des plans officiels Rockstar (vidéos ou captures 4K recadrées en 9:16, son
+du jeu coupé). Si aucun plan n'est disponible, le moteur s'arrête en erreur (code 1) au lieu de rendre une
+vidéo sans images du jeu.
 
 Usage : python3 shortgen3.py spec.json [--frames 0.0,4.2]   (--frames : PNG de contrôle seulement)
 
@@ -780,8 +781,13 @@ def main():
     segs, total, voice_parts = time_segments(spec["segments"])
     for s, raw in zip(segs, spec["segments"]):
         s["shots"] = raw.get("shots")
-    plan = plan_shots(segs, total, spec) if (spec.get("broll") or spec.get("broll_auto") or any(s["shots"] for s in segs)) else None
-    footage = bool(plan)
+    if not (spec.get("broll") or spec.get("broll_auto") or any(s["shots"] for s in segs)):
+        spec["broll_auto"] = {"tags": []}          # jamais de Short sans images du jeu
+    plan = plan_shots(segs, total, spec)
+    if not plan:
+        sys.exit("ERREUR : aucun plan officiel Rockstar disponible (catalogue ou media-rockstargames-com.akamaized.net "
+                 "injoignable). Rendu annulé : on ne publie jamais de Short sans images du jeu.")
+    footage = True
     if footage:   # images réelles : cartes compactes en bas, sous-titres au centre, visages (haut-milieu) dégagés
         CARD_TOP, CARD_BOTTOM, CARD_SCALE, CAP_Y = 1110, 1470, 0.78, 935
     for s in segs:
