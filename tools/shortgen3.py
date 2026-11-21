@@ -30,7 +30,9 @@ Spec :
 }
 Les URL sont téléchargées une fois dans $GTA6_MEDIA_CACHE (défaut ~/.cache/gta6-media).
 Couleurs "c" : text, sun, coral, pink, cyan.
-Voix : Piper TTS + voix LibriTTS (CC BY 4.0), dossier $GTA6_VOICE_DIR (défaut ~/voices).
+Voix : Kokoro TTS (Apache 2.0), voix américaine "am_fenrir" (grave, énergique), vitesse 1.1, traitement
+« punchy » (filtre passe-haut, présence, compression). Fichiers du modèle : $GTA6_VOICE_DIR/kokoro/
+(kokoro-v1.0.onnx et voices-v1.0.bin, défaut ~/voices/kokoro). Sans voix, le moteur s'arrête en erreur.
 Sans voix disponible, la vidéo est rendue avec sous-titres seuls (rythme de lecture).
 """
 import json, os, re, subprocess, sys, wave, zlib
@@ -48,8 +50,9 @@ CAP_Y = 1040
 CARD_TOP, CARD_BOTTOM = 330, 930
 CARD_SCALE = 1.0
 VOICE_DIR = os.environ.get("GTA6_VOICE_DIR", os.path.expanduser("~/voices"))
-VOICE_NAME = "en-us-libritts-high"
-SPEAKER, LENGTH = 888, 0.9
+KOKORO_VOICE, KOKORO_SPEED = os.environ.get("GTA6_KOKORO_VOICE", "am_fenrir"), 1.1
+VOICE_FX = ("highpass=f=70,equalizer=f=3500:t=q:w=1.2:g=3,"
+            "acompressor=threshold=-20dB:ratio=3.5:attack=4:release=80:makeup=3,alimiter=limit=0.95")
 
 FONT_DIRS = ["/usr/share/fonts/opentype/inter/", "/usr/share/fonts/truetype/dejavu/"]
 _fc = {}
@@ -198,9 +201,9 @@ def load_voice():
     if _voice is not None:
         return _voice or None
     try:
-        from piper import PiperVoice
-        m = os.path.join(VOICE_DIR, VOICE_NAME + ".onnx")
-        _voice = PiperVoice.load(m, config_path=m + ".json")
+        from kokoro_onnx import Kokoro
+        d = os.path.join(VOICE_DIR, "kokoro")
+        _voice = Kokoro(os.path.join(d, "kokoro-v1.0.onnx"), os.path.join(d, "voices-v1.0.bin"))
     except Exception as e:
         print("voix indisponible :", e, file=sys.stderr)
         _voice = False
@@ -210,11 +213,8 @@ def speak(sentence_spoken):
     v = load_voice()
     if not v:
         return None
-    from piper import SynthesisConfig
-    ch = list(v.synthesize(sentence_spoken, syn_config=SynthesisConfig(
-        speaker_id=SPEAKER, length_scale=LENGTH, noise_scale=0.6, noise_w_scale=0.7)))
-    a = np.concatenate([c.audio_float_array for c in ch]).astype(np.float32)
-    sr = ch[0].sample_rate
+    a, sr = v.create(sentence_spoken, voice=KOKORO_VOICE, speed=KOKORO_SPEED, lang="en-us")
+    a = np.asarray(a, dtype=np.float32)
     from scipy.signal import resample_poly
     g = np.gcd(sr, ASR)
     return resample_poly(a, ASR // g, sr // g).astype(np.float32)
@@ -471,7 +471,14 @@ def build_audio(total, segs, voice_parts, seed, path):
     for t0, a in voice_parts:
         i = int(t0 * ASR); a = a[: n - i]; voice[i:i + len(a)] += a
     if np.abs(voice).max() > 0:
-        voice = voice / np.abs(voice).max() * 0.89
+        voice = voice / np.abs(voice).max() * 0.7
+        p = subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "f32le", "-ar", str(ASR), "-ac", "1", "-i", "-",
+                            "-af", VOICE_FX, "-f", "f32le", "-ar", str(ASR), "-ac", "1", "-"],
+                           input=voice.tobytes(), capture_output=True)
+        if p.returncode == 0 and len(p.stdout) >= 4:
+            fxv = np.frombuffer(p.stdout, dtype=np.float32)[:n]
+            voice = np.zeros(n, np.float32); voice[:len(fxv)] = fxv
+        voice = voice / (np.abs(voice).max() + 1e-9) * 0.89
     env = np.convolve(np.abs(voice), np.ones(4410) / 4410, mode="same")
     duck = 1.0 - 0.6 * np.clip(env / (env.max() + 1e-9) * 3, 0, 1)
     music = make_music(total, seed) * (0.06 if np.abs(voice).max() > 0 else 0.16)
@@ -779,6 +786,9 @@ def main():
     seed = spec.get("seed", zlib.crc32(os.path.basename(out).encode()))
     global CAP_Y, CARD_TOP, CARD_BOTTOM, CARD_SCALE
     segs, total, voice_parts = time_segments(spec["segments"])
+    if not voice_parts:
+        sys.exit("ERREUR : voix Kokoro indisponible (modèle absent de $GTA6_VOICE_DIR/kokoro ou paquet kokoro-onnx "
+                 "manquant). Rendu annulé : pas de Short sans voix.")
     for s, raw in zip(segs, spec["segments"]):
         s["shots"] = raw.get("shots")
     if not (spec.get("broll") or spec.get("broll_auto") or any(s["shots"] for s in segs)):

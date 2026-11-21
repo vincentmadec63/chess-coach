@@ -7,4 +7,4 @@ Video files hosted for scheduled YouTube Shorts (via Metricool), plus the render
 - No fallback: the engine stops with an error if official footage is unavailable (no Short without game footage).
 
 Footage: Rockstar Games (official GTA VI media). Fan channel, not affiliated with Rockstar Games.
-Voice-over: Piper TTS with the LibriTTS voice (dataset CC BY 4.0, http://www.openslr.org/60/).
+Voice-over: Kokoro TTS (Apache 2.0), voice am_fenrir.
